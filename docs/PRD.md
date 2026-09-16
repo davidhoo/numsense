@@ -568,17 +568,7 @@ The prompt above the grid names the **slot role** (“Gate”, “Room”, “Ti
 
 ## 16. Engineering implications
 
-The current repo is a ~400-line mental-math scaffold (`AppModel` → `DrillEngine` → text-field `DrillView`). Keep the shell; replace the domain.
-
-| Keep | Replace |
-| --- | --- |
-| Xcode 27 / iPhone signing, `NumSenseApp` environment injection | `DrillEngine` arithmetic |
-| `AppModel` coordinator pattern (`start` / `submit` / `endSession`) | `DrillKind` add/subtract/multiply |
-| `NavigationStack` home → trial → result → settings | Numeric `TextField` answers |
-| Swift Testing + seeded RNG harness | Math-specific tests |
-| Result and Settings *layout* | Operand steppers; thin UserDefaults `SessionStore` as the only log |
-
-Target modules (Views depend on App; App composes the rest; Content has no UI/audio deps):
+The repo is the listening app (not the old mental-math scaffold). Modules:
 
 ```
 NumSense/
@@ -586,14 +576,13 @@ NumSense/
   Content/      catalog JSON, Sentence, Slot, trap tags, loaders
   Audio/        one-shot player, AVAudioSession, bundled m4a
   Visuals/      Clock, Calendar, Door, Gate, Price, Phone, …
-  Session/      trial flow, SessionBuilder, option shuffle
   Stats/        AttemptLog, queries, review-missed picker, export
   Views/        Home, Trial, Summary, Stats, Settings
+NumSenseTests/
+scripts/        build_catalog.py, generate_audio.py
 ```
 
-Vertical slice: one clock item + audio + 2×2 clocks + one logged slot + export stub, then fill categories in the [content-inventory.md](./content-inventory.md) build order (clock → money → room → gate → … → mixed). Mixed is the last step and the acceptance gate.
-
-Distractors: authored in the catalog for v1. Every 4-pack should include a phonological twin when the value allows it, and a cross-slot intrusion on multi-slot items.
+Distractors are authored in the catalog for v1. Every 4-pack should include a phonological twin when the value allows it, and a cross-slot intrusion on multi-slot items.
 
 ## 17. v1 acceptance
 

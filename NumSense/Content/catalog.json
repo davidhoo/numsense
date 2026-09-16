@@ -1,0 +1,7786 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "time-0315-colon",
+      "scenario": "time",
+      "spokenText": "It's three fifteen.",
+      "audioFile": "time-0315-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 15
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 50
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0315-alt",
+      "scenario": "time",
+      "spokenText": "It's a quarter after three.",
+      "audioFile": "time-0315-alt.m4a",
+      "variantTags": [
+        "quarter-after"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 15
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 50
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0350-colon",
+      "scenario": "time",
+      "spokenText": "It's three fifty.",
+      "audioFile": "time-0350-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 50
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 15
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0350-alt",
+      "scenario": "time",
+      "spokenText": "It's ten to four.",
+      "audioFile": "time-0350-alt.m4a",
+      "variantTags": [
+        "ten-to"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 50
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 15
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0330-colon",
+      "scenario": "time",
+      "spokenText": "It's three thirty.",
+      "audioFile": "time-0330-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 30
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 13
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0330-alt",
+      "scenario": "time",
+      "spokenText": "It's half past three.",
+      "audioFile": "time-0330-alt.m4a",
+      "variantTags": [
+        "half-past"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 30
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 13
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0305-colon",
+      "scenario": "time",
+      "spokenText": "It's three oh five.",
+      "audioFile": "time-0305-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 5
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 20
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0305-alt",
+      "scenario": "time",
+      "spokenText": "It's five after three.",
+      "audioFile": "time-0305-alt.m4a",
+      "variantTags": [
+        "five-after"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 5
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 20
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0345-colon",
+      "scenario": "time",
+      "spokenText": "It's three forty-five.",
+      "audioFile": "time-0345-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 45
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0345-alt",
+      "scenario": "time",
+      "spokenText": "It's a quarter to four.",
+      "audioFile": "time-0345-alt.m4a",
+      "variantTags": [
+        "quarter-to"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 45
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0300-colon",
+      "scenario": "time",
+      "spokenText": "It's three.",
+      "audioFile": "time-0300-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0300-alt",
+      "scenario": "time",
+      "spokenText": "It's three o'clock.",
+      "audioFile": "time-0300-alt.m4a",
+      "variantTags": [
+        "oclock"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1215-colon",
+      "scenario": "time",
+      "spokenText": "It's twelve fifteen.",
+      "audioFile": "time-1215-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 12,
+            "minute": 15
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 50
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1215-alt",
+      "scenario": "time",
+      "spokenText": "It's a quarter after twelve.",
+      "audioFile": "time-1215-alt.m4a",
+      "variantTags": [
+        "quarter-after"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 12,
+            "minute": 15
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 50
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1250-colon",
+      "scenario": "time",
+      "spokenText": "It's twelve fifty.",
+      "audioFile": "time-1250-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 12,
+            "minute": 50
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 15
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1250-alt",
+      "scenario": "time",
+      "spokenText": "It's ten to one.",
+      "audioFile": "time-1250-alt.m4a",
+      "variantTags": [
+        "ten-to"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 12,
+            "minute": 50
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 15
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1200-colon",
+      "scenario": "time",
+      "spokenText": "It's twelve.",
+      "audioFile": "time-1200-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 12,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1200-alt",
+      "scenario": "time",
+      "spokenText": "It's twelve o'clock.",
+      "audioFile": "time-1200-alt.m4a",
+      "variantTags": [
+        "oclock"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 12,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1045-colon",
+      "scenario": "time",
+      "spokenText": "It's ten forty-five.",
+      "audioFile": "time-1045-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 10,
+            "minute": 45
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 11,
+              "minute": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1045-alt",
+      "scenario": "time",
+      "spokenText": "It's a quarter to eleven.",
+      "audioFile": "time-1045-alt.m4a",
+      "variantTags": [
+        "quarter-to"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 10,
+            "minute": 45
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 11,
+              "minute": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0730-colon",
+      "scenario": "time",
+      "spokenText": "It's seven thirty.",
+      "audioFile": "time-0730-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 7,
+            "minute": 30
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 7,
+              "minute": 13
+            },
+            {
+              "type": "clock",
+              "hour": 7,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 8,
+              "minute": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0730-alt",
+      "scenario": "time",
+      "spokenText": "It's half past seven.",
+      "audioFile": "time-0730-alt.m4a",
+      "variantTags": [
+        "half-past"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 7,
+            "minute": 30
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 7,
+              "minute": 13
+            },
+            {
+              "type": "clock",
+              "hour": 7,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 8,
+              "minute": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0405-colon",
+      "scenario": "time",
+      "spokenText": "It's four oh five.",
+      "audioFile": "time-0405-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 4,
+            "minute": 5
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 20
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 5,
+              "minute": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0405-alt",
+      "scenario": "time",
+      "spokenText": "It's five after four.",
+      "audioFile": "time-0405-alt.m4a",
+      "variantTags": [
+        "five-after"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 4,
+            "minute": 5
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 20
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 5,
+              "minute": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0230-colon",
+      "scenario": "time",
+      "spokenText": "It's two thirty.",
+      "audioFile": "time-0230-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 2,
+            "minute": 30
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 13
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0230-alt",
+      "scenario": "time",
+      "spokenText": "It's half past two.",
+      "audioFile": "time-0230-alt.m4a",
+      "variantTags": [
+        "half-past"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 2,
+            "minute": 30
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 13
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0900-colon",
+      "scenario": "time",
+      "spokenText": "It's nine.",
+      "audioFile": "time-0900-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 9,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0900-alt",
+      "scenario": "time",
+      "spokenText": "It's nine o'clock.",
+      "audioFile": "time-0900-alt.m4a",
+      "variantTags": [
+        "oclock"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 9,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0115-colon",
+      "scenario": "time",
+      "spokenText": "It's one fifteen.",
+      "audioFile": "time-0115-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 1,
+            "minute": 15
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 50
+            },
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0115-alt",
+      "scenario": "time",
+      "spokenText": "It's a quarter after one.",
+      "audioFile": "time-0115-alt.m4a",
+      "variantTags": [
+        "quarter-after"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 1,
+            "minute": 15
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 50
+            },
+            {
+              "type": "clock",
+              "hour": 1,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0620-colon",
+      "scenario": "time",
+      "spokenText": "It's six twenty.",
+      "audioFile": "time-0620-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 6,
+            "minute": 20
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 6,
+              "minute": 35
+            },
+            {
+              "type": "clock",
+              "hour": 6,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 7,
+              "minute": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1140-colon",
+      "scenario": "time",
+      "spokenText": "It's eleven forty.",
+      "audioFile": "time-1140-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 11,
+            "minute": 40
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 11,
+              "minute": 14
+            },
+            {
+              "type": "clock",
+              "hour": 11,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0810-colon",
+      "scenario": "time",
+      "spokenText": "It's eight ten.",
+      "audioFile": "time-0810-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 8,
+            "minute": 10
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 8,
+              "minute": 25
+            },
+            {
+              "type": "clock",
+              "hour": 8,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0545-colon",
+      "scenario": "time",
+      "spokenText": "It's five forty-five.",
+      "audioFile": "time-0545-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 5,
+            "minute": 45
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 5,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 5,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 6,
+              "minute": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-0545-alt",
+      "scenario": "time",
+      "spokenText": "It's a quarter to six.",
+      "audioFile": "time-0545-alt.m4a",
+      "variantTags": [
+        "quarter-to"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 5,
+            "minute": 45
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 5,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 5,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 6,
+              "minute": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-1020-colon",
+      "scenario": "time",
+      "spokenText": "It's ten twenty.",
+      "audioFile": "time-1020-colon.m4a",
+      "variantTags": [
+        "colon-time"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor",
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 10,
+            "minute": 20
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 35
+            },
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 11,
+              "minute": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-open-9-6",
+      "scenario": "time",
+      "spokenText": "We're open from nine to six.",
+      "audioFile": "time-open-9-6.m4a",
+      "variantTags": [
+        "range"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "neighbor"
+      ],
+      "slots": [
+        {
+          "id": "a",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 9,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 6,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 0
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 6,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 6,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 16,
+              "minute": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-appt-230-pm",
+      "scenario": "time",
+      "spokenText": "Your appointment is at two thirty this afternoon.",
+      "audioFile": "time-appt-230-pm.m4a",
+      "variantTags": [
+        "appointment"
+      ],
+      "trapTags": [
+        "ampm",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 14,
+            "minute": 30,
+            "ampm": "pm"
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 30,
+              "ampm": "am"
+            },
+            {
+              "type": "clock",
+              "hour": 14,
+              "minute": 13
+            },
+            {
+              "type": "clock",
+              "hour": 15,
+              "minute": 30,
+              "ampm": "pm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-table-20min",
+      "scenario": "time",
+      "spokenText": "Your table will be ready in twenty minutes.",
+      "audioFile": "time-table-20min.m4a",
+      "variantTags": [
+        "duration"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "neighbor"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "duration",
+          "visual": "duration",
+          "value": {
+            "type": "duration",
+            "minutes": 20
+          },
+          "distractors": [
+            {
+              "type": "duration",
+              "minutes": 50
+            },
+            {
+              "type": "duration",
+              "minutes": 12
+            },
+            {
+              "type": "duration",
+              "minutes": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-meeting-45",
+      "scenario": "time",
+      "spokenText": "The meeting runs for forty-five minutes.",
+      "audioFile": "time-meeting-45.m4a",
+      "variantTags": [
+        "duration"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "duration",
+          "visual": "duration",
+          "value": {
+            "type": "duration",
+            "minutes": 45
+          },
+          "distractors": [
+            {
+              "type": "duration",
+              "minutes": 15
+            },
+            {
+              "type": "duration",
+              "minutes": 40
+            },
+            {
+              "type": "duration",
+              "minutes": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-hour-half",
+      "scenario": "time",
+      "spokenText": "Give me an hour and a half.",
+      "audioFile": "time-hour-half.m4a",
+      "variantTags": [
+        "duration"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "duration",
+          "visual": "duration",
+          "value": {
+            "type": "duration",
+            "minutes": 90
+          },
+          "distractors": [
+            {
+              "type": "duration",
+              "minutes": 30
+            },
+            {
+              "type": "duration",
+              "minutes": 60
+            },
+            {
+              "type": "duration",
+              "minutes": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-03-05-0",
+      "scenario": "date",
+      "spokenText": "Today is Thursday, March fifth.",
+      "audioFile": "date-03-05-0.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 5,
+            "weekday": "Thursday"
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 3,
+              "weekday": "Thursday"
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 13,
+              "weekday": "Thursday"
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 5,
+              "weekday": "Friday"
+            }
+          ]
+        },
+        {
+          "id": "w",
+          "role": "weekday",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 5,
+            "weekday": "Thursday"
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 5,
+              "weekday": "Friday"
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 5,
+              "weekday": "Wednesday"
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 5,
+              "weekday": "Sunday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-03-05-1",
+      "scenario": "date",
+      "spokenText": "That's March fifth.",
+      "audioFile": "date-03-05-1.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 5
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 3
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 5,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-03-05-2",
+      "scenario": "date",
+      "spokenText": "That's three five.",
+      "audioFile": "date-03-05-2.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 5
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 3
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 5,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-05-03-3",
+      "scenario": "date",
+      "spokenText": "That's May third.",
+      "audioFile": "date-05-03-3.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 5,
+            "day": 3
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 5
+            },
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 3,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-03-13-4",
+      "scenario": "date",
+      "spokenText": "See you on the thirteenth.",
+      "audioFile": "date-03-13-4.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 13
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 3
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 30
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 13,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-03-30-5",
+      "scenario": "date",
+      "spokenText": "See you on the thirtieth.",
+      "audioFile": "date-03-30-5.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 30
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 3
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 30,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-03-15-6",
+      "scenario": "date",
+      "spokenText": "Your return is on the fifteenth.",
+      "audioFile": "date-03-15-6.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 15
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 3
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 15,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-07-04-7",
+      "scenario": "date",
+      "spokenText": "That's Friday, July fourth.",
+      "audioFile": "date-07-04-7.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 7,
+            "day": 4,
+            "weekday": "Friday"
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 4,
+              "day": 7,
+              "weekday": "Friday"
+            },
+            {
+              "type": "calendar",
+              "month": 7,
+              "day": 13,
+              "weekday": "Friday"
+            },
+            {
+              "type": "calendar",
+              "month": 7,
+              "day": 4,
+              "weekday": "Tuesday"
+            }
+          ]
+        },
+        {
+          "id": "w",
+          "role": "weekday",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 7,
+            "day": 4,
+            "weekday": "Friday"
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 7,
+              "day": 4,
+              "weekday": "Monday"
+            },
+            {
+              "type": "calendar",
+              "month": 7,
+              "day": 4,
+              "weekday": "Wednesday"
+            },
+            {
+              "type": "calendar",
+              "month": 7,
+              "day": 4,
+              "weekday": "Sunday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-11-21-8",
+      "scenario": "date",
+      "spokenText": "It's November twenty-first.",
+      "audioFile": "date-11-21-8.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 11,
+            "day": 21
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 11
+            },
+            {
+              "type": "calendar",
+              "month": 11,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 11,
+              "day": 21,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-12-12-9",
+      "scenario": "date",
+      "spokenText": "We're checking in December twelfth.",
+      "audioFile": "date-12-12-9.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 12,
+            "day": 12
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 12,
+              "day": 12
+            },
+            {
+              "type": "calendar",
+              "month": 12,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 12,
+              "day": 12,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-01-01-10",
+      "scenario": "date",
+      "spokenText": "That's January first.",
+      "audioFile": "date-01-01-10.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 1,
+            "day": 1
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 1,
+              "day": 1
+            },
+            {
+              "type": "calendar",
+              "month": 1,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 1,
+              "day": 1,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-02-14-11",
+      "scenario": "date",
+      "spokenText": "That's February fourteenth.",
+      "audioFile": "date-02-14-11.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 2,
+            "day": 14
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 2
+            },
+            {
+              "type": "calendar",
+              "month": 2,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 2,
+              "day": 14,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-04-20-12",
+      "scenario": "date",
+      "spokenText": "That's April twentieth.",
+      "audioFile": "date-04-20-12.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 4,
+            "day": 20
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 4
+            },
+            {
+              "type": "calendar",
+              "month": 4,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 4,
+              "day": 20,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-08-31-13",
+      "scenario": "date",
+      "spokenText": "That's August thirty-first.",
+      "audioFile": "date-08-31-13.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 8,
+            "day": 31
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 8
+            },
+            {
+              "type": "calendar",
+              "month": 8,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 8,
+              "day": 31,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-09-12-14",
+      "scenario": "date",
+      "spokenText": "Monday, September twelfth.",
+      "audioFile": "date-09-12-14.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 9,
+            "day": 12,
+            "weekday": "Monday"
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 12,
+              "day": 9,
+              "weekday": "Monday"
+            },
+            {
+              "type": "calendar",
+              "month": 9,
+              "day": 13,
+              "weekday": "Monday"
+            },
+            {
+              "type": "calendar",
+              "month": 9,
+              "day": 12,
+              "weekday": "Friday"
+            }
+          ]
+        },
+        {
+          "id": "w",
+          "role": "weekday",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 9,
+            "day": 12,
+            "weekday": "Monday"
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 9,
+              "day": 12,
+              "weekday": "Friday"
+            },
+            {
+              "type": "calendar",
+              "month": 9,
+              "day": 12,
+              "weekday": "Wednesday"
+            },
+            {
+              "type": "calendar",
+              "month": 9,
+              "day": 12,
+              "weekday": "Sunday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-10-05-15",
+      "scenario": "date",
+      "spokenText": "October fifth.",
+      "audioFile": "date-10-05-15.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 10,
+            "day": 5
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 10
+            },
+            {
+              "type": "calendar",
+              "month": 10,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 10,
+              "day": 5,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-06-02-16",
+      "scenario": "date",
+      "spokenText": "June second.",
+      "audioFile": "date-06-02-16.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 6,
+            "day": 2
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 2,
+              "day": 6
+            },
+            {
+              "type": "calendar",
+              "month": 6,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 6,
+              "day": 2,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-03-21-17",
+      "scenario": "date",
+      "spokenText": "March twenty-first.",
+      "audioFile": "date-03-21-17.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 21
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 3
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 21,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-05-15-18",
+      "scenario": "date",
+      "spokenText": "May fifteenth.",
+      "audioFile": "date-05-15-18.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 5,
+            "day": 15
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 5
+            },
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 15,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-11-11-19",
+      "scenario": "date",
+      "spokenText": "November eleventh.",
+      "audioFile": "date-11-11-19.m4a",
+      "variantTags": [
+        "date"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 11,
+            "day": 11
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 11,
+              "day": 11
+            },
+            {
+              "type": "calendar",
+              "month": 11,
+              "day": 13
+            },
+            {
+              "type": "calendar",
+              "month": 11,
+              "day": 11,
+              "weekday": "Friday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-250-0",
+      "scenario": "money",
+      "spokenText": "That's two fifty.",
+      "audioFile": "money-250-0.m4a",
+      "variantTags": [
+        "fifty"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 250
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 2500
+            },
+            {
+              "type": "price",
+              "cents": 215
+            },
+            {
+              "type": "price",
+              "cents": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-250-1",
+      "scenario": "money",
+      "spokenText": "That's two dollars and fifty cents.",
+      "audioFile": "money-250-1.m4a",
+      "variantTags": [
+        "full"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 250
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 2500
+            },
+            {
+              "type": "price",
+              "cents": 215
+            },
+            {
+              "type": "price",
+              "cents": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-450-2",
+      "scenario": "money",
+      "spokenText": "It's four fifty with tax.",
+      "audioFile": "money-450-2.m4a",
+      "variantTags": [
+        "fifty"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 450
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 45000
+            },
+            {
+              "type": "price",
+              "cents": 415
+            },
+            {
+              "type": "price",
+              "cents": 350
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-1299-3",
+      "scenario": "money",
+      "spokenText": "That'll be twelve ninety-nine.",
+      "audioFile": "money-1299-3.m4a",
+      "variantTags": [
+        "nn"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 1299
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 129
+            },
+            {
+              "type": "price",
+              "cents": 1250
+            },
+            {
+              "type": "price",
+              "cents": 1199
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-1999-4",
+      "scenario": "money",
+      "spokenText": "It's nineteen ninety-nine.",
+      "audioFile": "money-1999-4.m4a",
+      "variantTags": [
+        "nn"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 1999
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 199
+            },
+            {
+              "type": "price",
+              "cents": 1950
+            },
+            {
+              "type": "price",
+              "cents": 1899
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-405-5",
+      "scenario": "money",
+      "spokenText": "That's four oh five.",
+      "audioFile": "money-405-5.m4a",
+      "variantTags": [
+        "oh"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 405
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 4050
+            },
+            {
+              "type": "price",
+              "cents": 450
+            },
+            {
+              "type": "price",
+              "cents": 305
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-2000-6",
+      "scenario": "money",
+      "spokenText": "You gave me a twenty.",
+      "audioFile": "money-2000-6.m4a",
+      "variantTags": [
+        "full"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 2000
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 200
+            },
+            {
+              "type": "price",
+              "cents": 2050
+            },
+            {
+              "type": "price",
+              "cents": 1900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-375-7",
+      "scenario": "money",
+      "spokenText": "Your change is three seventy-five.",
+      "audioFile": "money-375-7.m4a",
+      "variantTags": [
+        "fifty"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 375
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 3750
+            },
+            {
+              "type": "price",
+              "cents": 350
+            },
+            {
+              "type": "price",
+              "cents": 275
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-1250-8",
+      "scenario": "money",
+      "spokenText": "That's twelve fifty.",
+      "audioFile": "money-1250-8.m4a",
+      "variantTags": [
+        "fifty"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 1250
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 125
+            },
+            {
+              "type": "price",
+              "cents": 1215
+            },
+            {
+              "type": "price",
+              "cents": 5000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-1215-9",
+      "scenario": "money",
+      "spokenText": "That's twelve fifteen.",
+      "audioFile": "money-1215-9.m4a",
+      "variantTags": [
+        "colon"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 1215
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 121
+            },
+            {
+              "type": "price",
+              "cents": 1250
+            },
+            {
+              "type": "price",
+              "cents": 1115
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-600-10",
+      "scenario": "money",
+      "spokenText": "Fifteen percent is about six bucks.",
+      "audioFile": "money-600-10.m4a",
+      "variantTags": [
+        "full"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 600
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 6000
+            },
+            {
+              "type": "price",
+              "cents": 650
+            },
+            {
+              "type": "price",
+              "cents": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-1800-11",
+      "scenario": "money",
+      "spokenText": "Split it's eighteen each.",
+      "audioFile": "money-1800-11.m4a",
+      "variantTags": [
+        "full"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 1800
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 180
+            },
+            {
+              "type": "price",
+              "cents": 1850
+            },
+            {
+              "type": "price",
+              "cents": 1700
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-50-12",
+      "scenario": "money",
+      "spokenText": "That's fifty cents.",
+      "audioFile": "money-50-12.m4a",
+      "variantTags": [
+        "cents"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 50
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 500
+            },
+            {
+              "type": "price",
+              "cents": 15
+            },
+            {
+              "type": "price",
+              "cents": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-100-13",
+      "scenario": "money",
+      "spokenText": "Just a dollar.",
+      "audioFile": "money-100-13.m4a",
+      "variantTags": [
+        "full"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 100
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 1000
+            },
+            {
+              "type": "price",
+              "cents": 150
+            },
+            {
+              "type": "price",
+              "cents": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-999-14",
+      "scenario": "money",
+      "spokenText": "It's nine ninety-nine.",
+      "audioFile": "money-999-14.m4a",
+      "variantTags": [
+        "nn"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 999
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 9990
+            },
+            {
+              "type": "price",
+              "cents": 950
+            },
+            {
+              "type": "price",
+              "cents": 899
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-4250-15",
+      "scenario": "money",
+      "spokenText": "With tip that's forty-two fifty.",
+      "audioFile": "money-4250-15.m4a",
+      "variantTags": [
+        "fifty"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 4250
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 425
+            },
+            {
+              "type": "price",
+              "cents": 4215
+            },
+            {
+              "type": "price",
+              "cents": 4150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-199-16",
+      "scenario": "money",
+      "spokenText": "A dollar ninety-nine.",
+      "audioFile": "money-199-16.m4a",
+      "variantTags": [
+        "nn"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 199
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 1990
+            },
+            {
+              "type": "price",
+              "cents": 150
+            },
+            {
+              "type": "price",
+              "cents": 99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-750-17",
+      "scenario": "money",
+      "spokenText": "That's seven fifty.",
+      "audioFile": "money-750-17.m4a",
+      "variantTags": [
+        "fifty"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 750
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 7500
+            },
+            {
+              "type": "price",
+              "cents": 715
+            },
+            {
+              "type": "price",
+              "cents": 650
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-3050-18",
+      "scenario": "money",
+      "spokenText": "That's thirty fifty.",
+      "audioFile": "money-3050-18.m4a",
+      "variantTags": [
+        "fifty"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 3050
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 305
+            },
+            {
+              "type": "price",
+              "cents": 3015
+            },
+            {
+              "type": "price",
+              "cents": 2950
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-8800-19",
+      "scenario": "money",
+      "spokenText": "Eighty-eight dollars.",
+      "audioFile": "money-8800-19.m4a",
+      "variantTags": [
+        "full"
+      ],
+      "trapTags": [
+        "scale",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 8800
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 880
+            },
+            {
+              "type": "price",
+              "cents": 8850
+            },
+            {
+              "type": "price",
+              "cents": 8700
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-bill-change",
+      "scenario": "money",
+      "spokenText": "You gave me a twenty, so your change is three twenty-five.",
+      "audioFile": "money-bill-change.m4a",
+      "variantTags": [
+        "change"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "paid",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 2000
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 200
+            },
+            {
+              "type": "price",
+              "cents": 1000
+            },
+            {
+              "type": "price",
+              "cents": 2500
+            }
+          ]
+        },
+        {
+          "id": "ch",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 325
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 375
+            },
+            {
+              "type": "price",
+              "cents": 1325
+            },
+            {
+              "type": "price",
+              "cents": 2000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-402-0",
+      "scenario": "room",
+      "spokenText": "Your room number is four oh two.",
+      "audioFile": "room-402-0.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "402"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "420"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "42"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-402-1",
+      "scenario": "room",
+      "spokenText": "You're in four hundred two.",
+      "audioFile": "room-402-1.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "402"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "420"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "42"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-402-2",
+      "scenario": "room",
+      "spokenText": "You're in four zero two.",
+      "audioFile": "room-402-2.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "402"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "420"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "42"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-412-3",
+      "scenario": "room",
+      "spokenText": "That's room four twelve.",
+      "audioFile": "room-412-3.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "412"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-420-4",
+      "scenario": "room",
+      "spokenText": "Room four twenty.",
+      "audioFile": "room-420-4.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "420"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-1010-5",
+      "scenario": "room",
+      "spokenText": "We're in ten ten.",
+      "audioFile": "room-1010-5.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "1010"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-1108-6",
+      "scenario": "room",
+      "spokenText": "Room eleven oh eight.",
+      "audioFile": "room-1108-6.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "1108"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-7B-7",
+      "scenario": "room",
+      "spokenText": "You're in suite seven B.",
+      "audioFile": "room-7B-7.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "7B"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "B7"
+            },
+            {
+              "type": "door",
+              "text": "17B"
+            },
+            {
+              "type": "door",
+              "text": "7D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-12A-8",
+      "scenario": "room",
+      "spokenText": "Conference room twelve A.",
+      "audioFile": "room-12A-8.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "12A"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-214-9",
+      "scenario": "room",
+      "spokenText": "Room two fourteen.",
+      "audioFile": "room-214-9.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "214"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "240"
+            },
+            {
+              "type": "door",
+              "text": "204"
+            },
+            {
+              "type": "door",
+              "text": "314"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-240-10",
+      "scenario": "room",
+      "spokenText": "Room two forty.",
+      "audioFile": "room-240-10.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "240"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-300-11",
+      "scenario": "room",
+      "spokenText": "Room three hundred.",
+      "audioFile": "room-300-11.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "300"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-1508-12",
+      "scenario": "room",
+      "spokenText": "Fifteen oh eight.",
+      "audioFile": "room-1508-12.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "1508"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-9B-13",
+      "scenario": "room",
+      "spokenText": "Suite nine B.",
+      "audioFile": "room-9B-13.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "9B"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-1200-14",
+      "scenario": "room",
+      "spokenText": "Suite twelve hundred.",
+      "audioFile": "room-1200-14.m4a",
+      "variantTags": [
+        "room"
+      ],
+      "trapTags": [
+        "oh-vs-hundred",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "1200"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-floor-12-1215",
+      "scenario": "room",
+      "spokenText": "That's the twelfth floor, room twelve fifteen.",
+      "audioFile": "room-floor-12-1215.m4a",
+      "variantTags": [
+        "floor+room"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "f",
+          "role": "floor",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "12F"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "20F"
+            },
+            {
+              "type": "door",
+              "text": "13F"
+            },
+            {
+              "type": "door",
+              "text": "2F"
+            }
+          ]
+        },
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "1215"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "12F"
+            },
+            {
+              "type": "door",
+              "text": "1250"
+            },
+            {
+              "type": "door",
+              "text": "2115"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-c18",
+      "scenario": "travel",
+      "spokenText": "Boarding at gate C eighteen.",
+      "audioFile": "travel-c18.m4a",
+      "variantTags": [
+        "gate"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "g",
+          "role": "gate",
+          "visual": "gate",
+          "value": {
+            "type": "gate",
+            "letter": "C",
+            "number": 18
+          },
+          "distractors": [
+            {
+              "type": "gate",
+              "letter": "C",
+              "number": 80
+            },
+            {
+              "type": "gate",
+              "letter": "A",
+              "number": 18
+            },
+            {
+              "type": "gate",
+              "letter": "C",
+              "number": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-c18-digits",
+      "scenario": "travel",
+      "spokenText": "That's gate C one eight.",
+      "audioFile": "travel-c18-digits.m4a",
+      "variantTags": [
+        "gate-digitwise"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "g",
+          "role": "gate",
+          "visual": "gate",
+          "value": {
+            "type": "gate",
+            "letter": "C",
+            "number": 18
+          },
+          "distractors": [
+            {
+              "type": "gate",
+              "letter": "C",
+              "number": 80
+            },
+            {
+              "type": "gate",
+              "letter": "B",
+              "number": 18
+            },
+            {
+              "type": "gate",
+              "letter": "C",
+              "number": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-b12",
+      "scenario": "travel",
+      "spokenText": "Now boarding at gate B twelve.",
+      "audioFile": "travel-b12.m4a",
+      "variantTags": [
+        "gate"
+      ],
+      "trapTags": [
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "g",
+          "role": "gate",
+          "visual": "gate",
+          "value": {
+            "type": "gate",
+            "letter": "B",
+            "number": 12
+          },
+          "distractors": [
+            {
+              "type": "gate",
+              "letter": "B",
+              "number": 20
+            },
+            {
+              "type": "gate",
+              "letter": "D",
+              "number": 12
+            },
+            {
+              "type": "gate",
+              "letter": "B",
+              "number": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-flight-218",
+      "scenario": "travel",
+      "spokenText": "Flight two eighteen to Chicago.",
+      "audioFile": "travel-flight-218.m4a",
+      "variantTags": [
+        "flight"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "f",
+          "role": "flight",
+          "visual": "flight",
+          "value": {
+            "type": "flight",
+            "text": "218"
+          },
+          "distractors": [
+            {
+              "type": "flight",
+              "text": "280"
+            },
+            {
+              "type": "flight",
+              "text": "118"
+            },
+            {
+              "type": "flight",
+              "text": "212"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-flight-847",
+      "scenario": "travel",
+      "spokenText": "United eight forty-seven.",
+      "audioFile": "travel-flight-847.m4a",
+      "variantTags": [
+        "flight"
+      ],
+      "trapTags": [
+        "neighbor"
+      ],
+      "slots": [
+        {
+          "id": "f",
+          "role": "flight",
+          "visual": "flight",
+          "value": {
+            "type": "flight",
+            "text": "847"
+          },
+          "distractors": [
+            {
+              "type": "flight",
+              "text": "817"
+            },
+            {
+              "type": "flight",
+              "text": "447"
+            },
+            {
+              "type": "flight",
+              "text": "87"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-t2-b7",
+      "scenario": "travel",
+      "spokenText": "Terminal two, gate B seven.",
+      "audioFile": "travel-t2-b7.m4a",
+      "variantTags": [
+        "terminal+gate"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "terminal",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 2
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 3
+            },
+            {
+              "type": "quantity",
+              "number": 12
+            },
+            {
+              "type": "quantity",
+              "number": 7
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "role": "gate",
+          "visual": "gate",
+          "value": {
+            "type": "gate",
+            "letter": "B",
+            "number": 7
+          },
+          "distractors": [
+            {
+              "type": "gate",
+              "letter": "B",
+              "number": 2
+            },
+            {
+              "type": "gate",
+              "letter": "D",
+              "number": 7
+            },
+            {
+              "type": "gate",
+              "letter": "B",
+              "number": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-carousel-4",
+      "scenario": "travel",
+      "spokenText": "That's carousel four.",
+      "audioFile": "travel-carousel-4.m4a",
+      "variantTags": [
+        "carousel"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "c",
+          "role": "carousel",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 4
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 14
+            },
+            {
+              "type": "quantity",
+              "number": 40
+            },
+            {
+              "type": "quantity",
+              "number": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-i80-exit12b",
+      "scenario": "travel",
+      "spokenText": "Take eighty to exit twelve B.",
+      "audioFile": "travel-i80-exit12b.m4a",
+      "variantTags": [
+        "highway"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "h",
+          "role": "highway",
+          "visual": "highway",
+          "value": {
+            "type": "highway",
+            "text": "80"
+          },
+          "distractors": [
+            {
+              "type": "highway",
+              "text": "18"
+            },
+            {
+              "type": "highway",
+              "text": "8"
+            },
+            {
+              "type": "highway",
+              "text": "280"
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "role": "exit",
+          "visual": "exit",
+          "value": {
+            "type": "exit",
+            "text": "12B"
+          },
+          "distractors": [
+            {
+              "type": "exit",
+              "text": "20B"
+            },
+            {
+              "type": "exit",
+              "text": "12"
+            },
+            {
+              "type": "exit",
+              "text": "B12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-101",
+      "scenario": "travel",
+      "spokenText": "Stay on one-oh-one south.",
+      "audioFile": "travel-101.m4a",
+      "variantTags": [
+        "highway"
+      ],
+      "trapTags": [
+        "oh-vs-hundred"
+      ],
+      "slots": [
+        {
+          "id": "h",
+          "role": "highway",
+          "visual": "highway",
+          "value": {
+            "type": "highway",
+            "text": "101"
+          },
+          "distractors": [
+            {
+              "type": "highway",
+              "text": "10"
+            },
+            {
+              "type": "highway",
+              "text": "110"
+            },
+            {
+              "type": "highway",
+              "text": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-bus-38",
+      "scenario": "travel",
+      "spokenText": "Take the thirty-eight bus.",
+      "audioFile": "travel-bus-38.m4a",
+      "variantTags": [
+        "bus"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "b",
+          "role": "bus",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 38
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 13
+            },
+            {
+              "type": "quantity",
+              "number": 80
+            },
+            {
+              "type": "quantity",
+              "number": 28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-p2-114",
+      "scenario": "travel",
+      "spokenText": "Level P two, space one fourteen.",
+      "audioFile": "travel-p2-114.m4a",
+      "variantTags": [
+        "parking"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "l",
+          "role": "parkingLevel",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "P2"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "P3"
+            },
+            {
+              "type": "door",
+              "text": "2"
+            },
+            {
+              "type": "door",
+              "text": "P12"
+            }
+          ]
+        },
+        {
+          "id": "s",
+          "role": "parking",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "114"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "P2"
+            },
+            {
+              "type": "door",
+              "text": "140"
+            },
+            {
+              "type": "door",
+              "text": "104"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-checkin-625",
+      "scenario": "travel",
+      "spokenText": "Check-in closes at six twenty-five.",
+      "audioFile": "travel-checkin-625.m4a",
+      "variantTags": [
+        "time"
+      ],
+      "trapTags": [
+        "order",
+        "ampm"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 6,
+            "minute": 25
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 6,
+              "minute": 52
+            },
+            {
+              "type": "clock",
+              "hour": 16,
+              "minute": 25
+            },
+            {
+              "type": "clock",
+              "hour": 5,
+              "minute": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-seat-14a",
+      "scenario": "travel",
+      "spokenText": "You're in seat fourteen A.",
+      "audioFile": "travel-seat-14a.m4a",
+      "variantTags": [
+        "seat"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "s",
+          "role": "seat",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "14A"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "40A"
+            },
+            {
+              "type": "door",
+              "text": "14B"
+            },
+            {
+              "type": "door",
+              "text": "4A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel-delayed-40",
+      "scenario": "travel",
+      "spokenText": "We're delayed forty minutes. New time is three twenty.",
+      "audioFile": "travel-delayed-40.m4a",
+      "variantTags": [
+        "delay"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "duration",
+          "visual": "duration",
+          "value": {
+            "type": "duration",
+            "minutes": 40
+          },
+          "distractors": [
+            {
+              "type": "duration",
+              "minutes": 14
+            },
+            {
+              "type": "duration",
+              "minutes": 45
+            },
+            {
+              "type": "duration",
+              "minutes": 30
+            }
+          ]
+        },
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 20
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 40
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 20
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phone-last4-7216",
+      "scenario": "phone",
+      "spokenText": "The last four are seven two one six.",
+      "audioFile": "phone-last4-7216.m4a",
+      "variantTags": [
+        "last4"
+      ],
+      "trapTags": [
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "code",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "7216"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "7126"
+            },
+            {
+              "type": "phone",
+              "text": "7210"
+            },
+            {
+              "type": "phone",
+              "text": "2716"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phone-last4-1234-time",
+      "scenario": "phone",
+      "spokenText": "Last four is twelve thirty-four.",
+      "audioFile": "phone-last4-1234-time.m4a",
+      "variantTags": [
+        "last4-grouped"
+      ],
+      "trapTags": [
+        "chunk-merge"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "code",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "1234"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "1243"
+            },
+            {
+              "type": "phone",
+              "text": "1324"
+            },
+            {
+              "type": "phone",
+              "text": "1204"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phone-ext-203",
+      "scenario": "phone",
+      "spokenText": "Extension two oh three.",
+      "audioFile": "phone-ext-203.m4a",
+      "variantTags": [
+        "ext"
+      ],
+      "trapTags": [
+        "oh-vs-hundred"
+      ],
+      "slots": [
+        {
+          "id": "e",
+          "role": "extension",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "203"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "230"
+            },
+            {
+              "type": "phone",
+              "text": "2003"
+            },
+            {
+              "type": "phone",
+              "text": "213"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phone-code-4819",
+      "scenario": "phone",
+      "spokenText": "The code is four eight one nine.",
+      "audioFile": "phone-code-4819.m4a",
+      "variantTags": [
+        "otp"
+      ],
+      "trapTags": [
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "c",
+          "role": "code",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "4819"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "4189"
+            },
+            {
+              "type": "phone",
+              "text": "4891"
+            },
+            {
+              "type": "phone",
+              "text": "4810"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phone-local-555-0123",
+      "scenario": "phone",
+      "spokenText": "My number is five five five, oh one two three.",
+      "audioFile": "phone-local-555-0123.m4a",
+      "variantTags": [
+        "local7"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "oh-vs-hundred"
+      ],
+      "slots": [
+        {
+          "id": "a",
+          "role": "phone",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "555"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "515"
+            },
+            {
+              "type": "phone",
+              "text": "550"
+            },
+            {
+              "type": "phone",
+              "text": "5555"
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "role": "phone",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "0123"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "555"
+            },
+            {
+              "type": "phone",
+              "text": "1023"
+            },
+            {
+              "type": "phone",
+              "text": "0120"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phone-conf-h492",
+      "scenario": "phone",
+      "spokenText": "Your confirmation is H as in hotel, four nine two.",
+      "audioFile": "phone-conf-h492.m4a",
+      "variantTags": [
+        "confirm"
+      ],
+      "trapTags": [
+        "order",
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "c",
+          "role": "code",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "H492"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "H429"
+            },
+            {
+              "type": "phone",
+              "text": "A492"
+            },
+            {
+              "type": "phone",
+              "text": "H490"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phone-415-area",
+      "scenario": "phone",
+      "spokenText": "Call four one five, five five five, oh one two three.",
+      "audioFile": "phone-415-area.m4a",
+      "variantTags": [
+        "us10-chunked"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "a",
+          "role": "phone",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "415"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "451"
+            },
+            {
+              "type": "phone",
+              "text": "514"
+            },
+            {
+              "type": "phone",
+              "text": "405"
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "role": "phone",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "555"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "415"
+            },
+            {
+              "type": "phone",
+              "text": "550"
+            },
+            {
+              "type": "phone",
+              "text": "515"
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "role": "phone",
+          "visual": "phone",
+          "value": {
+            "type": "phone",
+            "text": "0123"
+          },
+          "distractors": [
+            {
+              "type": "phone",
+              "text": "1023"
+            },
+            {
+              "type": "phone",
+              "text": "0124"
+            },
+            {
+              "type": "phone",
+              "text": "555"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "addr-1422-oak",
+      "scenario": "address",
+      "spokenText": "That's fourteen twenty-two Oak Street.",
+      "audioFile": "addr-1422-oak.m4a",
+      "variantTags": [
+        "house"
+      ],
+      "trapTags": [
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "n",
+          "role": "address",
+          "visual": "address",
+          "value": {
+            "type": "address",
+            "text": "1422"
+          },
+          "distractors": [
+            {
+              "type": "address",
+              "text": "1224"
+            },
+            {
+              "type": "address",
+              "text": "1402"
+            },
+            {
+              "type": "address",
+              "text": "1420"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "addr-1420",
+      "scenario": "address",
+      "spokenText": "It's fourteen twenty Oak Street.",
+      "audioFile": "addr-1420.m4a",
+      "variantTags": [
+        "house"
+      ],
+      "trapTags": [
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "n",
+          "role": "address",
+          "visual": "address",
+          "value": {
+            "type": "address",
+            "text": "1420"
+          },
+          "distractors": [
+            {
+              "type": "address",
+              "text": "1402"
+            },
+            {
+              "type": "address",
+              "text": "1240"
+            },
+            {
+              "type": "address",
+              "text": "1422"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "addr-402-main",
+      "scenario": "address",
+      "spokenText": "Four oh two Main.",
+      "audioFile": "addr-402-main.m4a",
+      "variantTags": [
+        "house"
+      ],
+      "trapTags": [
+        "oh-vs-hundred"
+      ],
+      "slots": [
+        {
+          "id": "n",
+          "role": "address",
+          "visual": "address",
+          "value": {
+            "type": "address",
+            "text": "402"
+          },
+          "distractors": [
+            {
+              "type": "address",
+              "text": "420"
+            },
+            {
+              "type": "address",
+              "text": "412"
+            },
+            {
+              "type": "address",
+              "text": "42"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "addr-2100",
+      "scenario": "address",
+      "spokenText": "That's twenty-one hundred Mission.",
+      "audioFile": "addr-2100.m4a",
+      "variantTags": [
+        "house"
+      ],
+      "trapTags": [
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "n",
+          "role": "address",
+          "visual": "address",
+          "value": {
+            "type": "address",
+            "text": "2100"
+          },
+          "distractors": [
+            {
+              "type": "address",
+              "text": "1200"
+            },
+            {
+              "type": "address",
+              "text": "2110"
+            },
+            {
+              "type": "address",
+              "text": "2010"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "addr-16th",
+      "scenario": "address",
+      "spokenText": "It's on sixteenth and Mission.",
+      "audioFile": "addr-16th.m4a",
+      "variantTags": [
+        "numbered-street"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "n",
+          "role": "address",
+          "visual": "address",
+          "value": {
+            "type": "address",
+            "text": "16th"
+          },
+          "distractors": [
+            {
+              "type": "address",
+              "text": "60th"
+            },
+            {
+              "type": "address",
+              "text": "6th"
+            },
+            {
+              "type": "address",
+              "text": "15th"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "addr-apt-3c",
+      "scenario": "address",
+      "spokenText": "Apartment three C.",
+      "audioFile": "addr-apt-3c.m4a",
+      "variantTags": [
+        "apt"
+      ],
+      "trapTags": [
+        "letter-number"
+      ],
+      "slots": [
+        {
+          "id": "a",
+          "role": "apt",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "3C"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "C3"
+            },
+            {
+              "type": "door",
+              "text": "3D"
+            },
+            {
+              "type": "door",
+              "text": "13C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "addr-zip-94107",
+      "scenario": "address",
+      "spokenText": "ZIP code nine four one oh seven.",
+      "audioFile": "addr-zip-94107.m4a",
+      "variantTags": [
+        "zip"
+      ],
+      "trapTags": [
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "z",
+          "role": "zip",
+          "visual": "zip",
+          "value": {
+            "type": "zip",
+            "text": "94107"
+          },
+          "distractors": [
+            {
+              "type": "zip",
+              "text": "94017"
+            },
+            {
+              "type": "zip",
+              "text": "94170"
+            },
+            {
+              "type": "zip",
+              "text": "94117"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "addr-1422-3c-zip",
+      "scenario": "address",
+      "spokenText": "Fourteen twenty-two Oak, apartment three C, ZIP nine four one oh seven.",
+      "audioFile": "addr-1422-3c-zip.m4a",
+      "variantTags": [
+        "mixed-address"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "n",
+          "role": "address",
+          "visual": "address",
+          "value": {
+            "type": "address",
+            "text": "1422"
+          },
+          "distractors": [
+            {
+              "type": "address",
+              "text": "3C"
+            },
+            {
+              "type": "address",
+              "text": "1224"
+            },
+            {
+              "type": "address",
+              "text": "1402"
+            }
+          ]
+        },
+        {
+          "id": "a",
+          "role": "apt",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "3C"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "1422"
+            },
+            {
+              "type": "door",
+              "text": "3D"
+            },
+            {
+              "type": "door",
+              "text": "C3"
+            }
+          ]
+        },
+        {
+          "id": "z",
+          "role": "zip",
+          "visual": "zip",
+          "value": {
+            "type": "zip",
+            "text": "94107"
+          },
+          "distractors": [
+            {
+              "type": "zip",
+              "text": "1422"
+            },
+            {
+              "type": "zip",
+              "text": "94170"
+            },
+            {
+              "type": "zip",
+              "text": "94017"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-party-6",
+      "scenario": "measures",
+      "spokenText": "Party of six.",
+      "audioFile": "meas-party-6.m4a",
+      "variantTags": [
+        "count"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "q",
+          "role": "count",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 6
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 16
+            },
+            {
+              "type": "quantity",
+              "number": 60
+            },
+            {
+              "type": "quantity",
+              "number": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-dozen",
+      "scenario": "measures",
+      "spokenText": "We need a dozen.",
+      "audioFile": "meas-dozen.m4a",
+      "variantTags": [
+        "dozen"
+      ],
+      "trapTags": [
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "q",
+          "role": "count",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 12
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 20
+            },
+            {
+              "type": "quantity",
+              "number": 2
+            },
+            {
+              "type": "quantity",
+              "number": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-2.5lb",
+      "scenario": "measures",
+      "spokenText": "That's two and a half pounds.",
+      "audioFile": "meas-2.5lb.m4a",
+      "variantTags": [
+        "weight"
+      ],
+      "trapTags": [
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "w",
+          "role": "weight",
+          "visual": "scale",
+          "value": {
+            "type": "weight",
+            "amount": 2.5,
+            "unit": "lb"
+          },
+          "distractors": [
+            {
+              "type": "weight",
+              "amount": 25,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 2.5,
+              "unit": "gal"
+            },
+            {
+              "type": "weight",
+              "amount": 2.0,
+              "unit": "lb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-2.5lb-point",
+      "scenario": "measures",
+      "spokenText": "That's two point five pounds.",
+      "audioFile": "meas-2.5lb-point.m4a",
+      "variantTags": [
+        "weight-point"
+      ],
+      "trapTags": [
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "w",
+          "role": "weight",
+          "visual": "scale",
+          "value": {
+            "type": "weight",
+            "amount": 2.5,
+            "unit": "lb"
+          },
+          "distractors": [
+            {
+              "type": "weight",
+              "amount": 25,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 5.2,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 2.15,
+              "unit": "lb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-half-lb",
+      "scenario": "measures",
+      "spokenText": "Half a pound of turkey.",
+      "audioFile": "meas-half-lb.m4a",
+      "variantTags": [
+        "weight"
+      ],
+      "trapTags": [
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "w",
+          "role": "weight",
+          "visual": "scale",
+          "value": {
+            "type": "weight",
+            "amount": 0.5,
+            "unit": "lb"
+          },
+          "distractors": [
+            {
+              "type": "weight",
+              "amount": 1.5,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 5,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 0.5,
+              "unit": "kg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-48lb",
+      "scenario": "measures",
+      "spokenText": "You're at forty-eight pounds.",
+      "audioFile": "meas-48lb.m4a",
+      "variantTags": [
+        "luggage"
+      ],
+      "trapTags": [
+        "order",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "w",
+          "role": "weight",
+          "visual": "scale",
+          "value": {
+            "type": "weight",
+            "amount": 48,
+            "unit": "lb"
+          },
+          "distractors": [
+            {
+              "type": "weight",
+              "amount": 84,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 40.8,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 14,
+              "unit": "lb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-23kg",
+      "scenario": "measures",
+      "spokenText": "That's twenty-three kilos.",
+      "audioFile": "meas-23kg.m4a",
+      "variantTags": [
+        "luggage-kg"
+      ],
+      "trapTags": [
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "w",
+          "role": "weight",
+          "visual": "scale",
+          "value": {
+            "type": "weight",
+            "amount": 23,
+            "unit": "kg"
+          },
+          "distractors": [
+            {
+              "type": "weight",
+              "amount": 23,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 32,
+              "unit": "kg"
+            },
+            {
+              "type": "weight",
+              "amount": 13,
+              "unit": "kg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-180",
+      "scenario": "measures",
+      "spokenText": "He's one eighty.",
+      "audioFile": "meas-180.m4a",
+      "variantTags": [
+        "body"
+      ],
+      "trapTags": [
+        "oh-vs-hundred"
+      ],
+      "slots": [
+        {
+          "id": "w",
+          "role": "weight",
+          "visual": "scale",
+          "value": {
+            "type": "weight",
+            "amount": 180,
+            "unit": "lb"
+          },
+          "distractors": [
+            {
+              "type": "weight",
+              "amount": 118,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 80,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 190,
+              "unit": "lb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-135-bar",
+      "scenario": "measures",
+      "spokenText": "One thirty-five on the bar.",
+      "audioFile": "meas-135-bar.m4a",
+      "variantTags": [
+        "gym"
+      ],
+      "trapTags": [
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "w",
+          "role": "weight",
+          "visual": "scale",
+          "value": {
+            "type": "weight",
+            "amount": 135,
+            "unit": "lb"
+          },
+          "distractors": [
+            {
+              "type": "weight",
+              "amount": 153,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 35,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 130,
+              "unit": "lb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-13.2gal",
+      "scenario": "measures",
+      "spokenText": "You put in thirteen point two gallons.",
+      "audioFile": "meas-13.2gal.m4a",
+      "variantTags": [
+        "fuel"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "g",
+          "role": "fuel",
+          "visual": "pump",
+          "value": {
+            "type": "fuelGallons",
+            "gallons": 13.2
+          },
+          "distractors": [
+            {
+              "type": "fuelGallons",
+              "gallons": 30.2
+            },
+            {
+              "type": "price",
+              "cents": 1320
+            },
+            {
+              "type": "fuelGallons",
+              "gallons": 12.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-349-gal",
+      "scenario": "measures",
+      "spokenText": "Gas is three forty-nine a gallon.",
+      "audioFile": "meas-349-gal.m4a",
+      "variantTags": [
+        "fuel-price"
+      ],
+      "trapTags": [
+        "order",
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "fuelPrice",
+          "visual": "pump",
+          "value": {
+            "type": "fuelPrice",
+            "cents": 349
+          },
+          "distractors": [
+            {
+              "type": "fuelPrice",
+              "cents": 439
+            },
+            {
+              "type": "fuelPrice",
+              "cents": 319
+            },
+            {
+              "type": "price",
+              "cents": 349
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-2.4mi",
+      "scenario": "measures",
+      "spokenText": "It's about two point four miles.",
+      "audioFile": "meas-2.4mi.m4a",
+      "variantTags": [
+        "distance"
+      ],
+      "trapTags": [
+        "scale",
+        "chunk-merge"
+      ],
+      "slots": [
+        {
+          "id": "m",
+          "role": "distance",
+          "visual": "mile",
+          "value": {
+            "type": "miles",
+            "miles": 2.4
+          },
+          "distractors": [
+            {
+              "type": "miles",
+              "miles": 24
+            },
+            {
+              "type": "miles",
+              "miles": 2.14
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-70mph",
+      "scenario": "measures",
+      "spokenText": "You're doing seventy miles an hour.",
+      "audioFile": "meas-70mph.m4a",
+      "variantTags": [
+        "speed"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "s",
+          "role": "speed",
+          "visual": "speedo",
+          "value": {
+            "type": "mph",
+            "mph": 70
+          },
+          "distractors": [
+            {
+              "type": "mph",
+              "mph": 17
+            },
+            {
+              "type": "mph",
+              "mph": 75
+            },
+            {
+              "type": "mph",
+              "mph": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-70-short",
+      "scenario": "measures",
+      "spokenText": "You're doing seventy.",
+      "audioFile": "meas-70-short.m4a",
+      "variantTags": [
+        "speed"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "s",
+          "role": "speed",
+          "visual": "speedo",
+          "value": {
+            "type": "mph",
+            "mph": 70
+          },
+          "distractors": [
+            {
+              "type": "mph",
+              "mph": 17
+            },
+            {
+              "type": "mph",
+              "mph": 19
+            },
+            {
+              "type": "mph",
+              "mph": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-32psi",
+      "scenario": "measures",
+      "spokenText": "Fronts should be thirty-two PSI.",
+      "audioFile": "meas-32psi.m4a",
+      "variantTags": [
+        "psi"
+      ],
+      "trapTags": [
+        "order"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "pressure",
+          "visual": "gauge",
+          "value": {
+            "type": "psi",
+            "psi": 32
+          },
+          "distractors": [
+            {
+              "type": "psi",
+              "psi": 23
+            },
+            {
+              "type": "psi",
+              "psi": 35
+            },
+            {
+              "type": "psi",
+              "psi": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-5qt",
+      "scenario": "measures",
+      "spokenText": "It takes five quarts.",
+      "audioFile": "meas-5qt.m4a",
+      "variantTags": [
+        "oil"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "q",
+          "role": "volume",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 5
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 15
+            },
+            {
+              "type": "quantity",
+              "number": 4
+            },
+            {
+              "type": "quantity",
+              "number": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-72f",
+      "scenario": "measures",
+      "spokenText": "It's seventy-two degrees.",
+      "audioFile": "meas-72f.m4a",
+      "variantTags": [
+        "weather"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "temperature",
+          "visual": "temperature",
+          "value": {
+            "type": "temperature",
+            "degrees": 72
+          },
+          "distractors": [
+            {
+              "type": "temperature",
+              "degrees": 27
+            },
+            {
+              "type": "temperature",
+              "degrees": 17
+            },
+            {
+              "type": "temperature",
+              "degrees": 75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-85f",
+      "scenario": "measures",
+      "spokenText": "High of eighty-five.",
+      "audioFile": "meas-85f.m4a",
+      "variantTags": [
+        "weather"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "temperature",
+          "visual": "temperature",
+          "value": {
+            "type": "temperature",
+            "degrees": 85
+          },
+          "distractors": [
+            {
+              "type": "temperature",
+              "degrees": 18
+            },
+            {
+              "type": "temperature",
+              "degrees": 80
+            },
+            {
+              "type": "temperature",
+              "degrees": 95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-20off",
+      "scenario": "measures",
+      "spokenText": "Everything's twenty percent off.",
+      "audioFile": "meas-20off.m4a",
+      "variantTags": [
+        "percent"
+      ],
+      "trapTags": [
+        "teen-ty",
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "percent",
+          "visual": "percent",
+          "value": {
+            "type": "percent",
+            "percent": 20
+          },
+          "distractors": [
+            {
+              "type": "percent",
+              "percent": 50
+            },
+            {
+              "type": "price",
+              "cents": 2000
+            },
+            {
+              "type": "percent",
+              "percent": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-15off",
+      "scenario": "measures",
+      "spokenText": "That's fifteen percent off.",
+      "audioFile": "meas-15off.m4a",
+      "variantTags": [
+        "percent"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "percent",
+          "visual": "percent",
+          "value": {
+            "type": "percent",
+            "percent": 15
+          },
+          "distractors": [
+            {
+              "type": "percent",
+              "percent": 50
+            },
+            {
+              "type": "percent",
+              "percent": 13
+            },
+            {
+              "type": "price",
+              "cents": 1500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-aisle-14",
+      "scenario": "measures",
+      "spokenText": "Aisle fourteen.",
+      "audioFile": "meas-aisle-14.m4a",
+      "variantTags": [
+        "aisle"
+      ],
+      "trapTags": [
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "a",
+          "role": "aisle",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 14
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 40
+            },
+            {
+              "type": "quantity",
+              "number": 4
+            },
+            {
+              "type": "quantity",
+              "number": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meas-5below",
+      "scenario": "measures",
+      "spokenText": "It's five below.",
+      "audioFile": "meas-5below.m4a",
+      "variantTags": [
+        "weather"
+      ],
+      "trapTags": [
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "temperature",
+          "visual": "temperature",
+          "value": {
+            "type": "temperature",
+            "degrees": -5
+          },
+          "distractors": [
+            {
+              "type": "temperature",
+              "degrees": 5
+            },
+            {
+              "type": "temperature",
+              "degrees": -15
+            },
+            {
+              "type": "temperature",
+              "degrees": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-hotel-3-402",
+      "scenario": "mixed",
+      "spokenText": "Check-in is at three, you're in room four oh two.",
+      "audioFile": "mix-hotel-3-402.m4a",
+      "variantTags": [
+        "hotel"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 2
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 30
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 0
+            }
+          ]
+        },
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "402"
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 0
+            },
+            {
+              "type": "door",
+              "text": "420"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-hotel-3-412-4",
+      "scenario": "mixed",
+      "spokenText": "Check-in is at three, you're in four twelve, that's the fourth floor.",
+      "audioFile": "mix-hotel-3-412-4.m4a",
+      "variantTags": [
+        "hotel"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 3,
+            "minute": 0
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 12
+            },
+            {
+              "type": "clock",
+              "hour": 3,
+              "minute": 12
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 0
+            }
+          ]
+        },
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "412"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "402"
+            },
+            {
+              "type": "door",
+              "text": "4"
+            },
+            {
+              "type": "door",
+              "text": "420"
+            }
+          ]
+        },
+        {
+          "id": "f",
+          "role": "floor",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "4F"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "14F"
+            },
+            {
+              "type": "door",
+              "text": "412"
+            },
+            {
+              "type": "door",
+              "text": "3F"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-air-512-c18-1040",
+      "scenario": "mixed",
+      "spokenText": "Flight five twelve, gate C eighteen, boarding at ten forty.",
+      "audioFile": "mix-air-512-c18-1040.m4a",
+      "variantTags": [
+        "airport"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "f",
+          "role": "flight",
+          "visual": "flight",
+          "value": {
+            "type": "flight",
+            "text": "512"
+          },
+          "distractors": [
+            {
+              "type": "flight",
+              "text": "C18"
+            },
+            {
+              "type": "flight",
+              "text": "520"
+            },
+            {
+              "type": "flight",
+              "text": "412"
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "role": "gate",
+          "visual": "gate",
+          "value": {
+            "type": "gate",
+            "letter": "C",
+            "number": 18
+          },
+          "distractors": [
+            {
+              "type": "gate",
+              "letter": "C",
+              "number": 80
+            },
+            {
+              "type": "gate",
+              "letter": "A",
+              "number": 18
+            },
+            {
+              "type": "gate",
+              "letter": "C",
+              "number": 12
+            }
+          ]
+        },
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 10,
+            "minute": 40
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 18
+            },
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 15
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-air-87-b12-240",
+      "scenario": "mixed",
+      "spokenText": "Flight eighty-seven, gate B twelve, boarding at two forty.",
+      "audioFile": "mix-air-87-b12-240.m4a",
+      "variantTags": [
+        "airport"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "f",
+          "role": "flight",
+          "visual": "flight",
+          "value": {
+            "type": "flight",
+            "text": "87"
+          },
+          "distractors": [
+            {
+              "type": "flight",
+              "text": "18"
+            },
+            {
+              "type": "flight",
+              "text": "80"
+            },
+            {
+              "type": "flight",
+              "text": "12"
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "role": "gate",
+          "visual": "gate",
+          "value": {
+            "type": "gate",
+            "letter": "B",
+            "number": 12
+          },
+          "distractors": [
+            {
+              "type": "gate",
+              "letter": "B",
+              "number": 20
+            },
+            {
+              "type": "gate",
+              "letter": "A",
+              "number": 12
+            },
+            {
+              "type": "gate",
+              "letter": "B",
+              "number": 87
+            }
+          ]
+        },
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 2,
+            "minute": 40
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 12
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 40
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-table-4-715",
+      "scenario": "mixed",
+      "spokenText": "Table for four at seven fifteen.",
+      "audioFile": "mix-table-4-715.m4a",
+      "variantTags": [
+        "restaurant"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "q",
+          "role": "count",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 4
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 7
+            },
+            {
+              "type": "quantity",
+              "number": 14
+            },
+            {
+              "type": "quantity",
+              "number": 2
+            }
+          ]
+        },
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 7,
+            "minute": 15
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 7,
+              "minute": 50
+            },
+            {
+              "type": "clock",
+              "hour": 4,
+              "minute": 15
+            },
+            {
+              "type": "clock",
+              "hour": 7,
+              "minute": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-check-4260-50-740",
+      "scenario": "mixed",
+      "spokenText": "That's forty-two sixty, you paid fifty, change is seven forty.",
+      "audioFile": "mix-check-4260-50-740.m4a",
+      "variantTags": [
+        "checkout"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 4260
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 4216
+            },
+            {
+              "type": "price",
+              "cents": 5000
+            },
+            {
+              "type": "price",
+              "cents": 740
+            }
+          ]
+        },
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 5000
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 4260
+            },
+            {
+              "type": "price",
+              "cents": 1500
+            },
+            {
+              "type": "price",
+              "cents": 500
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 740
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 4260
+            },
+            {
+              "type": "price",
+              "cents": 704
+            },
+            {
+              "type": "price",
+              "cents": 1740
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-doc-tue-5-230-9",
+      "scenario": "mixed",
+      "spokenText": "Tuesday the fifth at two thirty, suite nine.",
+      "audioFile": "mix-doc-tue-5-230-9.m4a",
+      "variantTags": [
+        "clinic"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 5,
+            "weekday": "Tuesday"
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 2,
+              "weekday": "Tuesday"
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 5,
+              "weekday": "Thursday"
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 15,
+              "weekday": "Tuesday"
+            }
+          ]
+        },
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 2,
+            "minute": 30
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 5,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 13
+            },
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "9"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "5"
+            },
+            {
+              "type": "door",
+              "text": "19"
+            },
+            {
+              "type": "door",
+              "text": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-gas-349-132-4610",
+      "scenario": "mixed",
+      "spokenText": "Three forty-nine a gallon, you put in thirteen point two, that's forty-six ten.",
+      "audioFile": "mix-gas-349-132-4610.m4a",
+      "variantTags": [
+        "gas"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "p",
+          "role": "fuelPrice",
+          "visual": "pump",
+          "value": {
+            "type": "fuelPrice",
+            "cents": 349
+          },
+          "distractors": [
+            {
+              "type": "fuelGallons",
+              "gallons": 13.2
+            },
+            {
+              "type": "fuelPrice",
+              "cents": 439
+            },
+            {
+              "type": "price",
+              "cents": 4610
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "role": "fuel",
+          "visual": "pump",
+          "value": {
+            "type": "fuelGallons",
+            "gallons": 13.2
+          },
+          "distractors": [
+            {
+              "type": "fuelPrice",
+              "cents": 349
+            },
+            {
+              "type": "fuelGallons",
+              "gallons": 30.2
+            },
+            {
+              "type": "price",
+              "cents": 1320
+            }
+          ]
+        },
+        {
+          "id": "t",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 4610
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 349
+            },
+            {
+              "type": "price",
+              "cents": 1320
+            },
+            {
+              "type": "price",
+              "cents": 4160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-grocery-25lb-740",
+      "scenario": "mixed",
+      "spokenText": "Two and a half pounds, that's seven forty.",
+      "audioFile": "mix-grocery-25lb-740.m4a",
+      "variantTags": [
+        "grocery"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "scale"
+      ],
+      "slots": [
+        {
+          "id": "w",
+          "role": "weight",
+          "visual": "scale",
+          "value": {
+            "type": "weight",
+            "amount": 2.5,
+            "unit": "lb"
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 740
+            },
+            {
+              "type": "weight",
+              "amount": 25,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 7.4,
+              "unit": "lb"
+            }
+          ]
+        },
+        {
+          "id": "p",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 740
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 250
+            },
+            {
+              "type": "price",
+              "cents": 704
+            },
+            {
+              "type": "price",
+              "cents": 1740
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-hwy-101-12b-24",
+      "scenario": "mixed",
+      "spokenText": "Stay on one-oh-one to exit twelve B, about two point four miles.",
+      "audioFile": "mix-hwy-101-12b-24.m4a",
+      "variantTags": [
+        "highway"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "h",
+          "role": "highway",
+          "visual": "highway",
+          "value": {
+            "type": "highway",
+            "text": "101"
+          },
+          "distractors": [
+            {
+              "type": "exit",
+              "text": "12B"
+            },
+            {
+              "type": "highway",
+              "text": "10"
+            },
+            {
+              "type": "highway",
+              "text": "110"
+            }
+          ]
+        },
+        {
+          "id": "e",
+          "role": "exit",
+          "visual": "exit",
+          "value": {
+            "type": "exit",
+            "text": "12B"
+          },
+          "distractors": [
+            {
+              "type": "highway",
+              "text": "101"
+            },
+            {
+              "type": "exit",
+              "text": "12"
+            },
+            {
+              "type": "exit",
+              "text": "2B"
+            }
+          ]
+        },
+        {
+          "id": "m",
+          "role": "distance",
+          "visual": "mile",
+          "value": {
+            "type": "miles",
+            "miles": 2.4
+          },
+          "distractors": [
+            {
+              "type": "miles",
+              "miles": 12
+            },
+            {
+              "type": "miles",
+              "miles": 24
+            },
+            {
+              "type": "clock",
+              "hour": 2,
+              "minute": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-pickup-1420-10",
+      "scenario": "mixed",
+      "spokenText": "I'm at fourteen twenty Market, pickup in ten minutes.",
+      "audioFile": "mix-pickup-1420-10.m4a",
+      "variantTags": [
+        "ride"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "n",
+          "role": "address",
+          "visual": "address",
+          "value": {
+            "type": "address",
+            "text": "1420"
+          },
+          "distractors": [
+            {
+              "type": "address",
+              "text": "10"
+            },
+            {
+              "type": "address",
+              "text": "1402"
+            },
+            {
+              "type": "address",
+              "text": "1240"
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "role": "duration",
+          "visual": "duration",
+          "value": {
+            "type": "duration",
+            "minutes": 10
+          },
+          "distractors": [
+            {
+              "type": "duration",
+              "minutes": 14
+            },
+            {
+              "type": "duration",
+              "minutes": 20
+            },
+            {
+              "type": "duration",
+              "minutes": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-desk-thu-5-915-3",
+      "scenario": "mixed",
+      "spokenText": "Thursday the fifth, nine fifteen, window three.",
+      "audioFile": "mix-desk-thu-5-915-3.m4a",
+      "variantTags": [
+        "desk"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "d",
+          "role": "date",
+          "visual": "calendar",
+          "value": {
+            "type": "calendar",
+            "month": 3,
+            "day": 5,
+            "weekday": "Thursday"
+          },
+          "distractors": [
+            {
+              "type": "calendar",
+              "month": 5,
+              "day": 3,
+              "weekday": "Thursday"
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 5,
+              "weekday": "Tuesday"
+            },
+            {
+              "type": "calendar",
+              "month": 3,
+              "day": 15,
+              "weekday": "Thursday"
+            }
+          ]
+        },
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 9,
+            "minute": 15
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 50
+            },
+            {
+              "type": "clock",
+              "hour": 5,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 3
+            }
+          ]
+        },
+        {
+          "id": "w",
+          "role": "window",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 3
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 5
+            },
+            {
+              "type": "quantity",
+              "number": 9
+            },
+            {
+              "type": "quantity",
+              "number": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-air-218-c18",
+      "scenario": "mixed",
+      "spokenText": "Flight two eighteen, gate C eighteen.",
+      "audioFile": "mix-air-218-c18.m4a",
+      "variantTags": [
+        "airport"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion",
+        "teen-ty"
+      ],
+      "slots": [
+        {
+          "id": "f",
+          "role": "flight",
+          "visual": "flight",
+          "value": {
+            "type": "flight",
+            "text": "218"
+          },
+          "distractors": [
+            {
+              "type": "flight",
+              "text": "C18"
+            },
+            {
+              "type": "flight",
+              "text": "280"
+            },
+            {
+              "type": "flight",
+              "text": "118"
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "role": "gate",
+          "visual": "gate",
+          "value": {
+            "type": "gate",
+            "letter": "C",
+            "number": 18
+          },
+          "distractors": [
+            {
+              "type": "gate",
+              "letter": "C",
+              "number": 80
+            },
+            {
+              "type": "gate",
+              "letter": "A",
+              "number": 18
+            },
+            {
+              "type": "gate",
+              "letter": "B",
+              "number": 218
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-hotel-715-9b",
+      "scenario": "mixed",
+      "spokenText": "Your reservation is at seven fifteen, suite nine B.",
+      "audioFile": "mix-hotel-715-9b.m4a",
+      "variantTags": [
+        "hotel"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 7,
+            "minute": 15
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 7,
+              "minute": 50
+            },
+            {
+              "type": "clock",
+              "hour": 9,
+              "minute": 15
+            },
+            {
+              "type": "clock",
+              "hour": 7,
+              "minute": 9
+            }
+          ]
+        },
+        {
+          "id": "r",
+          "role": "room",
+          "visual": "door",
+          "value": {
+            "type": "door",
+            "text": "9B"
+          },
+          "distractors": [
+            {
+              "type": "door",
+              "text": "7"
+            },
+            {
+              "type": "door",
+              "text": "19B"
+            },
+            {
+              "type": "door",
+              "text": "B9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-lunch-1230-6",
+      "scenario": "mixed",
+      "spokenText": "Lunch is at twelve thirty for a party of six.",
+      "audioFile": "mix-lunch-1230-6.m4a",
+      "variantTags": [
+        "restaurant"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 12,
+            "minute": 30
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 6,
+              "minute": 0
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 13
+            },
+            {
+              "type": "clock",
+              "hour": 11,
+              "minute": 30
+            }
+          ]
+        },
+        {
+          "id": "q",
+          "role": "count",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 6
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 12
+            },
+            {
+              "type": "quantity",
+              "number": 16
+            },
+            {
+              "type": "quantity",
+              "number": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-board-1045-c12",
+      "scenario": "mixed",
+      "spokenText": "Boarding at ten forty-five, gate C twelve.",
+      "audioFile": "mix-board-1045-c12.m4a",
+      "variantTags": [
+        "airport"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "t",
+          "role": "clock",
+          "visual": "clock",
+          "value": {
+            "type": "clock",
+            "hour": 10,
+            "minute": 45
+          },
+          "distractors": [
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 12
+            },
+            {
+              "type": "clock",
+              "hour": 12,
+              "minute": 45
+            },
+            {
+              "type": "clock",
+              "hour": 10,
+              "minute": 15
+            }
+          ]
+        },
+        {
+          "id": "g",
+          "role": "gate",
+          "visual": "gate",
+          "value": {
+            "type": "gate",
+            "letter": "C",
+            "number": 12
+          },
+          "distractors": [
+            {
+              "type": "gate",
+              "letter": "C",
+              "number": 10
+            },
+            {
+              "type": "gate",
+              "letter": "A",
+              "number": 12
+            },
+            {
+              "type": "gate",
+              "letter": "C",
+              "number": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-tip-4860-20",
+      "scenario": "mixed",
+      "spokenText": "Bill's forty-eight sixty. Twenty percent is about ten.",
+      "audioFile": "mix-tip-4860-20.m4a",
+      "variantTags": [
+        "receipt"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "b",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 4860
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 4816
+            },
+            {
+              "type": "price",
+              "cents": 2010
+            },
+            {
+              "type": "price",
+              "cents": 4086
+            }
+          ]
+        },
+        {
+          "id": "p",
+          "role": "percent",
+          "visual": "percent",
+          "value": {
+            "type": "percent",
+            "percent": 20
+          },
+          "distractors": [
+            {
+              "type": "percent",
+              "percent": 15
+            },
+            {
+              "type": "price",
+              "cents": 2000
+            },
+            {
+              "type": "percent",
+              "percent": 50
+            }
+          ]
+        },
+        {
+          "id": "t",
+          "role": "amount",
+          "visual": "price",
+          "value": {
+            "type": "price",
+            "cents": 1000
+          },
+          "distractors": [
+            {
+              "type": "price",
+              "cents": 4860
+            },
+            {
+              "type": "price",
+              "cents": 2000
+            },
+            {
+              "type": "price",
+              "cents": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-bag-48lb-carousel4",
+      "scenario": "mixed",
+      "spokenText": "Bag's forty-eight pounds, carousel four.",
+      "audioFile": "mix-bag-48lb-carousel4.m4a",
+      "variantTags": [
+        "airport"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "w",
+          "role": "weight",
+          "visual": "scale",
+          "value": {
+            "type": "weight",
+            "amount": 48,
+            "unit": "lb"
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 4
+            },
+            {
+              "type": "weight",
+              "amount": 84,
+              "unit": "lb"
+            },
+            {
+              "type": "weight",
+              "amount": 14,
+              "unit": "lb"
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "role": "carousel",
+          "visual": "quantity",
+          "value": {
+            "type": "quantity",
+            "number": 4
+          },
+          "distractors": [
+            {
+              "type": "quantity",
+              "number": 48
+            },
+            {
+              "type": "quantity",
+              "number": 14
+            },
+            {
+              "type": "quantity",
+              "number": 40
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mix-fill-132-70mi",
+      "scenario": "mixed",
+      "spokenText": "You put in thirteen point two gallons. Range is about two hundred seventy miles.",
+      "audioFile": "mix-fill-132-70mi.m4a",
+      "variantTags": [
+        "gas"
+      ],
+      "trapTags": [
+        "cross-slot-intrusion"
+      ],
+      "slots": [
+        {
+          "id": "g",
+          "role": "fuel",
+          "visual": "pump",
+          "value": {
+            "type": "fuelGallons",
+            "gallons": 13.2
+          },
+          "distractors": [
+            {
+              "type": "miles",
+              "miles": 270
+            },
+            {
+              "type": "fuelGallons",
+              "gallons": 30.2
+            },
+            {
+              "type": "price",
+              "cents": 1320
+            }
+          ]
+        },
+        {
+          "id": "m",
+          "role": "distance",
+          "visual": "mile",
+          "value": {
+            "type": "miles",
+            "miles": 270
+          },
+          "distractors": [
+            {
+              "type": "fuelGallons",
+              "gallons": 13.2
+            },
+            {
+              "type": "miles",
+              "miles": 217
+            },
+            {
+              "type": "mph",
+              "mph": 70
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -18,9 +18,9 @@
 
 每一次作答都记在本机，可看正确率、连续天数和错题，也可导出 JSON / CSV。没有账号，数据不会上传。
 
-## 在 iPhone 17 Pro 上自签名安装
+## 在 iPhone 上自签名安装
 
-需要 [Xcode 27](https://developer.apple.com/xcode/) 和一台 iPhone（在 iPhone 17 Pro / iOS 27 上开发）。用你的 Apple ID 签名即可，不必加入付费开发者计划。
+需要 [Xcode 27](https://developer.apple.com/xcode/) 和一台运行 **iOS 17 或更高** 的 iPhone。用你的 Apple ID 签名即可，不必加入付费开发者计划。
 
 1. USB 连接 iPhone，首次连接时在手机上信任这台电脑。
 2. 打开 `NumSense.xcodeproj`，Scheme 选 **NumSense**，设备选你的 iPhone。

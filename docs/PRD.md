@@ -1,7 +1,7 @@
 # NumSense PRD
 
 **Product:** NumSense（数字语感）  
-**Platform:** iOS 27, iPhone 17 Pro, personal self-signed app  
+**Platform:** iOS 17+, iPhone, personal self-signed app  
 **UI language:** English  
 **Audio language:** Conversational American English  
 **Status:** v1 specification after requirements clarification  
@@ -588,7 +588,7 @@ Distractors are authored in the catalog for v1. Every 4-pack should include a ph
 
 The app is v1-complete when:
 
-1. A session of 12 mixed items runs offline on the iPhone 17 Pro.  
+1. A session of 12 mixed items runs offline on an iPhone running iOS 17 or later.  
 2. Every scenario in §8 has playable items (not a stub category).  
 3. Mixed items with 2–3 slots use sequential 2×2 visuals.  
 4. Audio is bundled neural American English at conversational speed.  

@@ -62,6 +62,21 @@ final class AppModel {
         return chosen != slot.value
     }
 
+    var isFinalSlot: Bool {
+        guard let item = currentItem else { return false }
+        return slotIndex + 1 >= item.slots.count
+    }
+
+    var shouldShowTranscript: Bool {
+        phase == .feedback && isFinalSlot
+    }
+
+    var itemHasAnyWrong: Bool {
+        itemSlotCorrect.contains(false)
+    }
+
+    private var advanceTask: Task<Void, Never>?
+
     init(catalog: CatalogStore = .loadBundled(), log: AttemptLog = AttemptLog()) {
         self.catalog = catalog
         self.log = log
@@ -96,6 +111,8 @@ final class AppModel {
 
     func beginSession(items: [CatalogItem], source: String) {
         audio.stop()
+        advanceTask?.cancel()
+        advanceTask = nil
         self.source = source
         queue = items
         itemIndex = 0
@@ -114,15 +131,26 @@ final class AppModel {
 
     func endSessionEarly() {
         audio.stop()
+        advanceTask?.cancel()
+        advanceTask = nil
         playGeneration += 1
         finishSession(completed: false)
         phase = .summary
     }
 
     func dismissSummary() {
+        advanceTask?.cancel()
+        advanceTask = nil
         phase = .idle
         queue = []
         lastFinished = nil
+    }
+
+    func skipFeedbackDelay() {
+        guard phase == .feedback else { return }
+        advanceTask?.cancel()
+        advanceTask = nil
+        advanceAfterSlot()
     }
 
     func choose(_ value: SlotValue) {
@@ -169,20 +197,48 @@ final class AppModel {
         }
 
         phase = .feedback
-        if correct {
-            Task { @MainActor in
-                try? await Task.sleep(for: .milliseconds(350))
-                advanceAfterSlot()
+        let isFinal = isFinalSlot
+
+        advanceTask?.cancel()
+        playGeneration += 1
+        let gen = playGeneration
+
+        if isFinal {
+            // 一道题全部问完（单问或多问的最后一问）
+            if correct {
+                // 成功：显示对应文本，根据句子长度留出 3.5s ~ 5.0s 充分阅读时间
+                let readingWait = max(3.5, min(Double(item.spokenText.count) * 0.055, 5.0))
+                advanceTask = Task { @MainActor in
+                    try? await Task.sleep(for: .seconds(readingWait))
+                    guard gen == self.playGeneration else { return }
+                    self.advanceAfterSlot()
+                }
+            } else {
+                // 失败：重播音频并显示对应文本，在重播后保留充足对比时间
+                audio.replay()
+                let wait = max(self.audio.duration + 2.8, 4.8)
+                advanceTask = Task { @MainActor in
+                    try? await Task.sleep(for: .seconds(wait))
+                    guard gen == self.playGeneration else { return }
+                    self.advanceAfterSlot()
+                }
             }
         } else {
-            playGeneration += 1
-            let gen = playGeneration
-            audio.replay()
-            let wait = max(audio.duration + 1.6, 2.8)
-            Task { @MainActor in
-                try? await Task.sleep(for: .seconds(wait))
-                guard gen == self.playGeneration else { return }
-                self.advanceAfterSlot()
+            // 多问的中间问题：不展示完整文本，避免提前泄露后续题目答案
+            if correct {
+                advanceTask = Task { @MainActor in
+                    try? await Task.sleep(for: .milliseconds(400))
+                    guard gen == self.playGeneration else { return }
+                    self.advanceAfterSlot()
+                }
+            } else {
+                audio.replay()
+                let wait = max(self.audio.duration + 1.2, 2.5)
+                advanceTask = Task { @MainActor in
+                    try? await Task.sleep(for: .seconds(wait))
+                    guard gen == self.playGeneration else { return }
+                    self.advanceAfterSlot()
+                }
             }
         }
     }

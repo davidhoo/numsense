@@ -13,7 +13,7 @@ struct TrialView: View {
 
                     listenChrome
 
-                    if appModel.phase == .feedback, appModel.lastAnswerWasWrong {
+                    if appModel.shouldShowTranscript {
                         spokenTranscript
                     }
 
@@ -61,27 +61,48 @@ struct TrialView: View {
 
     private var spokenTranscript: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text("What was said")
-                .font(.caption.weight(.semibold))
-                .foregroundStyle(.secondary)
+            HStack {
+                Text("What was said")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.secondary)
+                Spacer()
+                Text("Tap to continue")
+                    .font(.caption2.weight(.medium))
+                    .foregroundStyle(.secondary.opacity(0.8))
+            }
             Text("“\(appModel.currentItem?.spokenText ?? "")”")
                 .font(.body)
                 .italic()
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(12)
-        .background(.orange.opacity(0.12), in: RoundedRectangle(cornerRadius: 12))
+        .background(
+            appModel.itemHasAnyWrong ? Color.orange.opacity(0.14) : Color.green.opacity(0.14),
+            in: RoundedRectangle(cornerRadius: 12)
+        )
+        .contentShape(Rectangle())
+        .onTapGesture {
+            appModel.skipFeedbackDelay()
+        }
         .accessibilityLabel("Spoken sentence: \(appModel.currentItem?.spokenText ?? "")")
     }
 
     private var statusText: String {
         switch appModel.phase {
-        case .listen: "Listen — tap the speaker to hear it again"
-        case .waiting: "Hold it…"
-        case .options: "Choose — tap the ear to replay"
+        case .listen:
+            return "Listen — tap the speaker to hear it again"
+        case .waiting:
+            return "Hold it…"
+        case .options:
+            return "Choose — tap the ear to replay"
         case .feedback:
-            appModel.lastAnswerWasWrong ? "Compare with the sentence" : " "
-        default: ""
+            if appModel.shouldShowTranscript {
+                return appModel.itemHasAnyWrong ? "Compare with the sentence" : "Well done! Read along"
+            } else {
+                return appModel.lastAnswerWasWrong ? "Listen and compare" : " "
+            }
+        default:
+            return ""
         }
     }
 

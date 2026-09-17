@@ -51,17 +51,17 @@ struct SlotValueView: View {
         case "clock":
             ClockValueView(value: value, settings: settings, caption: caption)
         case "duration":
-            labeled("\(value.minutes ?? 0) min", caption: caption)
+            RealisticTimerView(minutes: value.minutes ?? 0)
         case "calendar":
             CalendarCardView(value: value, emphasizeWeekday: question.emphasizeWeekday)
         case "price":
-            labeled(Self.money(value.cents ?? 0), caption: caption)
+            RealisticPriceTagView(text: Self.money(value.cents ?? 0), caption: caption)
         case "door":
             DoorPlateView(text: value.text ?? "", caption: caption)
         case "gate":
             GateSignView(letter: value.letter ?? "", number: value.number ?? 0)
         case "flight":
-            labeled(value.text ?? "", caption: caption)
+            RealisticFlightSignView(text: value.text ?? "")
         case "phone":
             PhoneChunkView(
                 text: value.text ?? "",
@@ -76,25 +76,25 @@ struct SlotValueView: View {
         case "quantity":
             labeled("\(value.number ?? 0)", caption: caption)
         case "percent":
-            labeled("\(value.percent ?? 0)%", caption: caption)
+            RealisticPercentBadgeView(percent: value.percent ?? 0, caption: caption)
         case "temperature":
-            TemperatureView(degrees: value.degrees ?? 0)
+            RealisticThermometerView(degrees: value.degrees ?? 0)
         case "weight":
-            labeled(weightLabel, caption: weightCaption)
+            RealisticWeightScaleView(text: weightLabel, caption: weightCaption)
         case "fuelGallons":
-            labeled(String(format: "%.1f gal", value.gallons ?? 0), caption: caption)
+            RealisticFuelPumpView(mode: .gallonsPumped, text: String(format: "%.1f", value.gallons ?? 0))
         case "fuelPrice":
-            labeled("\(Self.money(value.cents ?? 0))/gal", caption: caption)
+            RealisticFuelPumpView(mode: .pricePerGallon, text: String(format: "$%.2f", Double(value.cents ?? 0) / 100.0))
         case "miles":
-            labeled(mileLabel, caption: caption)
+            RealisticMilePostView(text: mileLabel)
         case "mph":
             SpeedoView(mph: value.mph ?? 0)
         case "psi":
-            labeled("\(value.psi ?? 0) PSI", caption: caption)
+            RealisticTirePressureGaugeView(psi: value.psi ?? 0)
         case "highway":
             HighwayShieldView(text: value.text ?? "")
         case "exit":
-            labeled(value.text ?? "", caption: caption)
+            RealisticExitSignView(text: value.text ?? "")
         default:
             labeled(value.text ?? "?", caption: caption)
         }
@@ -153,14 +153,15 @@ struct ClockValueView: View {
                 .font(.caption2.weight(.semibold))
                 .foregroundStyle(.secondary)
             if settings.clockStyle == .analog {
-                AnalogClockFace(hour: hour24, minute: minute)
-                    .frame(width: 84, height: 84)
+                RealisticAnalogClockFace(hour: hour24, minute: minute, diameter: 84)
+                Text(digital)
+                    .font(.system(size: 16, weight: .semibold, design: .rounded))
+                    .monospacedDigit()
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
+            } else {
+                RealisticDigitalClockFace(text: digital, ampm: value.ampm)
             }
-            Text(digital)
-                .font(.system(size: settings.clockStyle == .digital ? 32 : 18, weight: .semibold, design: .rounded))
-                .monospacedDigit()
-                .minimumScaleFactor(0.5)
-                .lineLimit(1)
         }
     }
 
@@ -194,76 +195,93 @@ struct AnalogClockFace: View {
     let minute: Int
 
     var body: some View {
-        Canvas { context, size in
-            let center = CGPoint(x: size.width / 2, y: size.height / 2)
-            let radius = min(size.width, size.height) / 2 - 2
-            var face = Path()
-            face.addEllipse(in: CGRect(x: center.x - radius, y: center.y - radius, width: radius * 2, height: radius * 2))
-            context.stroke(face, with: .color(.primary), lineWidth: 2)
-
-            for i in 0..<12 {
-                let angle = Double(i) / 12 * .pi * 2 - .pi / 2
-                let inner = radius * 0.82
-                let outer = radius * 0.94
-                var tick = Path()
-                tick.move(to: CGPoint(x: center.x + cos(angle) * inner, y: center.y + sin(angle) * inner))
-                tick.addLine(to: CGPoint(x: center.x + cos(angle) * outer, y: center.y + sin(angle) * outer))
-                context.stroke(tick, with: .color(.primary), lineWidth: i % 3 == 0 ? 2.5 : 1)
-            }
-
-            let hourAngle = (Double(hour % 12) + Double(minute) / 60) / 12 * .pi * 2 - .pi / 2
-            let minuteAngle = Double(minute) / 60 * .pi * 2 - .pi / 2
-            drawHand(context: context, center: center, angle: hourAngle, length: radius * 0.5, width: 3.5)
-            drawHand(context: context, center: center, angle: minuteAngle, length: radius * 0.72, width: 2)
-            let cap = Path(ellipseIn: CGRect(x: center.x - 3, y: center.y - 3, width: 6, height: 6))
-            context.fill(cap, with: .color(.primary))
-        }
-        .accessibilityLabel(Text("\(hour % 12 == 0 ? 12 : hour % 12):\(String(format: "%02d", minute))"))
-    }
-
-    private func drawHand(context: GraphicsContext, center: CGPoint, angle: Double, length: Double, width: CGFloat) {
-        var path = Path()
-        path.move(to: center)
-        path.addLine(to: CGPoint(x: center.x + cos(angle) * length, y: center.y + sin(angle) * length))
-        context.stroke(path, with: .color(.primary), style: StrokeStyle(lineWidth: width, lineCap: .round))
+        RealisticAnalogClockFace(hour: hour, minute: minute, diameter: 84)
     }
 }
 
 struct CalendarCardView: View {
     let value: SlotValue
     var emphasizeWeekday: Bool = false
+    @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
-        if emphasizeWeekday {
-            VStack(spacing: 4) {
-                Text("DAY")
-                    .font(.caption2.weight(.semibold))
-                    .foregroundStyle(.secondary)
-                Text(value.weekday ?? "—")
-                    .font(.system(size: 22, weight: .bold, design: .rounded))
+        VStack(spacing: 0) {
+            // 顶部红色挂头 + 双金属打孔
+            HStack {
+                Circle()
+                    .fill(
+                        RadialGradient(
+                            colors: [Color(white: 0.9), Color(white: 0.4)],
+                            center: .center,
+                            startRadius: 0.5,
+                            endRadius: 3
+                        )
+                    )
+                    .frame(width: 5, height: 5)
+                Spacer()
+                Text(emphasizeWeekday ? "DAY" : monthName)
+                    .font(.system(size: 11, weight: .bold, design: .default))
+                    .foregroundStyle(.white)
                     .textCase(.uppercase)
-                    .minimumScaleFactor(0.5)
-                    .lineLimit(1)
-                Text("\(monthName) \(value.day ?? 0)")
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
-                    .monospacedDigit()
+                Spacer()
+                Circle()
+                    .fill(
+                        RadialGradient(
+                            colors: [Color(white: 0.9), Color(white: 0.4)],
+                            center: .center,
+                            startRadius: 0.5,
+                            endRadius: 3
+                        )
+                    )
+                    .frame(width: 5, height: 5)
             }
-        } else {
+            .padding(.horizontal, 8)
+            .padding(.vertical, 5)
+            .frame(maxWidth: .infinity)
+            .background(
+                LinearGradient(
+                    colors: [Color(red: 0.88, green: 0.18, blue: 0.18), Color(red: 0.72, green: 0.10, blue: 0.12)],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            )
+
+            // 日历白纸主体
             VStack(spacing: 2) {
-                Text(monthName)
-                    .font(.caption.weight(.semibold))
-                    .textCase(.uppercase)
-                Text("\(value.day ?? 0)")
-                    .font(.system(size: 36, weight: .bold, design: .rounded))
-                    .monospacedDigit()
-                if let weekday = value.weekday {
-                    Text(String(weekday.prefix(3)).uppercased())
-                        .font(.caption2.weight(.semibold))
+                if emphasizeWeekday {
+                    Text(value.weekday ?? "—")
+                        .font(.system(size: 19, weight: .bold, design: .rounded))
+                        .textCase(.uppercase)
+                        .foregroundStyle(.primary)
+                        .minimumScaleFactor(0.5)
+                        .lineLimit(1)
+                    Text("\(monthName) \(value.day ?? 0)")
+                        .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
+                        .monospacedDigit()
+                } else {
+                    Text("\(value.day ?? 0)")
+                        .font(.system(size: 32, weight: .heavy, design: .rounded))
+                        .foregroundStyle(.primary)
+                        .monospacedDigit()
+                    if let weekday = value.weekday {
+                        Text(String(weekday.prefix(3)).uppercased())
+                            .font(.caption2.weight(.bold))
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 6)
+            .background(colorScheme == .dark ? Color(white: 0.2) : Color(white: 0.98))
         }
+        .frame(width: 84, height: 84)
+        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .strokeBorder(Color.black.opacity(0.12), lineWidth: 1)
+        }
+        .shadow(color: .black.opacity(colorScheme == .dark ? 0.4 : 0.18), radius: 3, x: 0, y: 2)
     }
 
     private var monthName: String {
@@ -279,19 +297,7 @@ struct DoorPlateView: View {
     var caption: String = "ROOM"
 
     var body: some View {
-        VStack(spacing: 8) {
-            RoundedRectangle(cornerRadius: 4)
-                .fill(Color.secondary.opacity(0.25))
-                .frame(height: 10)
-            Text(caption)
-                .font(.caption2.weight(.semibold))
-                .foregroundStyle(.secondary)
-            Text(text)
-                .font(.system(size: 30, weight: .bold, design: .rounded))
-                .monospacedDigit()
-                .minimumScaleFactor(0.4)
-                .lineLimit(1)
-        }
+        RealisticDoorPlateView(text: text, caption: caption)
     }
 }
 
@@ -300,18 +306,7 @@ struct GateSignView: View {
     let number: Int
 
     var body: some View {
-        VStack(spacing: 2) {
-            Text("GATE")
-                .font(.caption2.weight(.semibold))
-                .foregroundStyle(.secondary)
-            HStack(alignment: .firstTextBaseline, spacing: 4) {
-                Text(letter)
-                    .font(.system(size: 36, weight: .bold, design: .rounded))
-                Text("\(number)")
-                    .font(.system(size: 32, weight: .semibold, design: .rounded))
-                    .monospacedDigit()
-            }
-        }
+        RealisticGateSignView(letter: letter, number: number)
     }
 }
 
@@ -320,15 +315,7 @@ struct HouseNumberView: View {
     var caption: String = "HOUSE"
 
     var body: some View {
-        VStack(spacing: 6) {
-            Text(caption)
-                .font(.caption2.weight(.semibold))
-                .foregroundStyle(.secondary)
-            Text(text)
-                .font(.system(size: 28, weight: .bold, design: .serif))
-                .minimumScaleFactor(0.4)
-                .lineLimit(1)
-        }
+        RealisticHouseNumberView(text: text, caption: caption)
     }
 }
 
@@ -412,14 +399,7 @@ struct SpeedoView: View {
     let mph: Int
 
     var body: some View {
-        VStack(spacing: 4) {
-            Text("MPH")
-                .font(.caption2.weight(.semibold))
-                .foregroundStyle(.secondary)
-            Text("\(mph)")
-                .font(.system(size: 32, weight: .bold, design: .rounded))
-                .monospacedDigit()
-        }
+        RealisticSpeedSignView(mph: mph)
     }
 }
 
@@ -427,17 +407,6 @@ struct HighwayShieldView: View {
     let text: String
 
     var body: some View {
-        VStack(spacing: 6) {
-            Text("I")
-                .font(.caption.weight(.bold))
-            Text(text)
-                .font(.system(size: 28, weight: .bold, design: .rounded))
-                .monospacedDigit()
-        }
-        .frame(width: 72, height: 72)
-        .overlay {
-            RoundedRectangle(cornerRadius: 8)
-                .strokeBorder(.primary, lineWidth: 2)
-        }
+        RealisticHighwayShieldView(text: text)
     }
 }

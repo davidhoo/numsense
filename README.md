@@ -10,6 +10,18 @@
 
 本 App **不上架 App Store**，用 Xcode 自签名装到 iPhone 即可。主屏幕名称是「数字语感」，界面为英文。
 
+## 界面预览
+
+| 主界面 | 钟面时间识别 | 复合场景分步识别 |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/01-home.png" width="240" alt="主界面" /> | <img src="docs/screenshots/02-practice-clock.png" width="240" alt="钟面时间识别" /> | <img src="docs/screenshots/03-practice-multistep.png" width="240" alt="复合场景分步识别" /> |
+| 快速开始与近期训练统计 | 听口语时间，直觉反应表盘 | 航班与登机口多信息留存 |
+
+| 即时纠错与原文对照 | 单次训练小结 | 本地长期统计 |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/04-feedback.png" width="240" alt="即时纠错与原文对照" /> | <img src="docs/screenshots/05-summary.png" width="240" alt="单次训练小结" /> | <img src="docs/screenshots/06-stats.png" width="240" alt="本地长期统计" /> |
+| 标出正误并提供原句反馈 | 场景得分与一键复习错题 | 7天/30天正确率与易混项分析 |
+
 ## 怎么练
 
 每次播一句日常语速的美式英语。停一秒后，出现 2×2 图像选项；一句里有多个数字，就按顺序分步问。点对进入下一题；点错会立刻标出正确图，并再播一遍作为反馈。没听清时，点耳朵图标可以再听。

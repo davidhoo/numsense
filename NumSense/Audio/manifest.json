@@ -1,0 +1,14 @@
+{
+  "vendor": "elevenlabs",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceName": "Sarah",
+  "model": "eleven_multilingual_v2",
+  "speakingRate": 1.0,
+  "stability": 0.5,
+  "similarityBoost": 0.75,
+  "style": 0.0,
+  "applyTextNormalization": "off",
+  "itemCount": 168,
+  "generatedThisRun": 168,
+  "skippedThisRun": 0
+}

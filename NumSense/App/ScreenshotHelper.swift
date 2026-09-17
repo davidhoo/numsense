@@ -43,6 +43,7 @@ enum ScreenshotHelper {
                 model.queue = Array(repeating: item, count: 12)
                 model.itemIndex = 3
                 model.slotIndex = 0
+                model.itemSlotCorrect = [false]
                 let slot = item.slots[0]
                 let wrongChoice = slot.distractors.first ?? slot.value
                 model.live = LiveSlotState(
@@ -73,131 +74,80 @@ enum ScreenshotHelper {
         let cal = Calendar.current
         let now = Date()
 
-        for dayOffset in (0..<5).reversed() {
-            guard let sessionDate = cal.date(byAdding: .day, value: -dayOffset, to: now) else { continue }
-            let isToday = dayOffset == 0
-            let correctCount = isToday ? 11 : 10
+        // Daily median progression across 7 days: ~2.2s down to ~1.22s
+        let dayFactors: [Double] = [1.75, 1.55, 1.40, 1.25, 1.12, 1.05, 0.95]
 
-            let itemAttempts: [ItemAttemptRecord] = [
-                ItemAttemptRecord(
-                    id: UUID(),
-                    itemId: "time-0315-alt",
-                    scenario: "time",
-                    scriptText: "It's a quarter after three.",
-                    audioFile: "time-0315-alt.m4a",
-                    variantTags: ["quarter-after"],
-                    presentedAt: sessionDate,
-                    itemFirstListenCorrect: true,
-                    slotAttempts: [
-                        SlotAttemptRecord(
-                            id: UUID(),
-                            slotId: "t",
-                            slotIndex: 0,
-                            role: "clock",
-                            visual: "clock",
-                            correctValue: SlotValue(type: "clock", hour: 3, minute: 15),
-                            chosenValue: SlotValue(type: "clock", hour: 3, minute: 15),
-                            distractors: [],
-                            firstTapCorrect: true,
-                            responseMs: 1400,
-                            replayedAfterWrong: false,
-                            confusionTag: nil
-                        )
-                    ]
-                ),
-                ItemAttemptRecord(
-                    id: UUID(),
-                    itemId: "room-402-0",
-                    scenario: "room",
-                    scriptText: "Your room number is four oh two.",
-                    audioFile: "room-402-0.m4a",
-                    variantTags: [],
-                    presentedAt: sessionDate,
-                    itemFirstListenCorrect: false,
-                    slotAttempts: [
-                        SlotAttemptRecord(
-                            id: UUID(),
-                            slotId: "r",
-                            slotIndex: 0,
-                            role: "room",
-                            visual: "door",
-                            correctValue: SlotValue(type: "door", text: "402"),
-                            chosenValue: SlotValue(type: "door", text: "420"),
-                            distractors: [],
-                            firstTapCorrect: false,
-                            responseMs: 2100,
-                            replayedAfterWrong: true,
-                            confusionTag: "oh-vs-hundred"
-                        )
-                    ]
-                ),
-                ItemAttemptRecord(
-                    id: UUID(),
-                    itemId: "money-1250-8",
-                    scenario: "money",
-                    scriptText: "Twelve dollars and fifty cents.",
-                    audioFile: "money-1250-8.m4a",
-                    variantTags: [],
-                    presentedAt: sessionDate,
-                    itemFirstListenCorrect: true,
-                    slotAttempts: [
-                        SlotAttemptRecord(
-                            id: UUID(),
-                            slotId: "m",
-                            slotIndex: 0,
-                            role: "price",
-                            visual: "price",
-                            correctValue: SlotValue(type: "price", cents: 1250),
-                            chosenValue: SlotValue(type: "price", cents: 1250),
-                            distractors: [],
-                            firstTapCorrect: true,
-                            responseMs: 1200,
-                            replayedAfterWrong: false,
-                            confusionTag: nil
-                        )
-                    ]
-                ),
-                ItemAttemptRecord(
-                    id: UUID(),
-                    itemId: "mix-air-218-c18",
-                    scenario: "mixed",
-                    scriptText: "Flight two eighteen, gate C eighteen.",
-                    audioFile: "mix-air-218-c18.m4a",
-                    variantTags: ["airport"],
-                    presentedAt: sessionDate,
-                    itemFirstListenCorrect: true,
-                    slotAttempts: [
-                        SlotAttemptRecord(
-                            id: UUID(),
-                            slotId: "f",
-                            slotIndex: 0,
-                            role: "flight",
-                            visual: "flight",
-                            correctValue: SlotValue(type: "flight", text: "218"),
-                            chosenValue: SlotValue(type: "flight", text: "218"),
-                            distractors: [],
-                            firstTapCorrect: true,
-                            responseMs: 1600,
-                            replayedAfterWrong: false,
-                            confusionTag: nil
-                        ),
-                        SlotAttemptRecord(
-                            id: UUID(),
-                            slotId: "g",
-                            slotIndex: 1,
-                            role: "gate",
-                            visual: "gate",
-                            correctValue: SlotValue(type: "gate", letter: "C", number: 18),
-                            chosenValue: SlotValue(type: "gate", letter: "C", number: 18),
-                            distractors: [],
-                            firstTapCorrect: true,
-                            responseMs: 1500,
-                            replayedAfterWrong: false,
-                            confusionTag: nil
-                        )
-                    ]
-                )
+        for dayOffset in (0..<7).reversed() {
+            guard let sessionDate = cal.date(byAdding: .day, value: -dayOffset, to: now) else { continue }
+            let factorIndex = 6 - dayOffset
+            let speedFactor = dayFactors[factorIndex]
+            let isToday = dayOffset == 0
+
+            let items: [(itemId: String, sc: String, text: String, slots: [(role: String, visual: String, val: SlotValue, baseMs: Int, ok: Bool, tag: String?)])] = [
+                ("time-0315-alt", "time", "It's a quarter after three.", [("clock", "clock", SlotValue(type: "clock", hour: 3, minute: 15), 1250, true, nil)]),
+                ("room-402-0", "room", "Your room number is four oh two.", [("room", "door", SlotValue(type: "door", text: "402"), 1350, true, nil)]),
+                ("money-1250-8", "money", "Twelve dollars and fifty cents.", [("price", "price", SlotValue(type: "price", cents: 1250), 1080, true, nil)]),
+                ("travel-exit-14", "travel", "Take exit fourteen B.", [("exit", "exit", SlotValue(type: "exit", text: "14B"), 1180, true, nil)]),
+                ("mix-air-218-c18", "mixed", "Flight two eighteen, gate C eighteen.", [
+                    ("flight", "flight", SlotValue(type: "flight", text: "218"), 1400, true, nil),
+                    ("gate", "gate", SlotValue(type: "gate", letter: "C", number: 18), 1580, true, nil)
+                ]),
+                ("measures-temp-72", "measures", "It's seventy two degrees outside.", [("temperature", "temperature", SlotValue(type: "temperature", degrees: 72), 1220, true, nil)]),
+                ("date-oct-23", "date", "Our flight is on October twenty-third.", [("calendar", "calendar", SlotValue(type: "calendar", month: 10, day: 23), 1260, true, nil)]),
+                ("phone-chunk-800", "phone", "Call us at eight hundred, five five five.", [
+                    ("phone", "phone", SlotValue(type: "phone", text: "800"), 1320, true, nil),
+                    ("phone", "phone", SlotValue(type: "phone", text: "555"), 2150, isToday ? false : (dayOffset % 2 == 0), "speed-decay")
+                ]),
+                ("address-oak-742", "address", "Seven forty two Evergreen Terrace.", [("address", "address", SlotValue(type: "address", text: "742"), 1300, true, nil)]),
+                ("time-0845-0", "time", "It's eight forty-five.", [("clock", "clock", SlotValue(type: "clock", hour: 8, minute: 45), 1180, true, nil)])
             ]
+
+            var itemAttempts: [ItemAttemptRecord] = []
+            var sessionTotalSlots = 0
+            var sessionCorrectSlots = 0
+
+            for (itemId, sc, text, slotDefs) in items {
+                var slotRecords: [SlotAttemptRecord] = []
+                var itemCorrect = true
+                for (idx, slotDef) in slotDefs.enumerated() {
+                    let adjustedMs = Int(Double(slotDef.baseMs) * speedFactor)
+                    let slotOk = isToday ? slotDef.ok : (slotDef.ok && (dayOffset < 3 || idx == 0))
+                    if !slotOk { itemCorrect = false }
+                    sessionTotalSlots += 1
+                    if slotOk { sessionCorrectSlots += 1 }
+
+                    slotRecords.append(
+                        SlotAttemptRecord(
+                            id: UUID(),
+                            slotId: "\(idx)",
+                            slotIndex: idx,
+                            role: slotDef.role,
+                            visual: slotDef.visual,
+                            correctValue: slotDef.val,
+                            chosenValue: slotDef.val,
+                            distractors: [],
+                            firstTapCorrect: slotOk,
+                            responseMs: adjustedMs,
+                            replayedAfterWrong: !slotOk,
+                            confusionTag: slotDef.tag
+                        )
+                    )
+                }
+
+                itemAttempts.append(
+                    ItemAttemptRecord(
+                        id: UUID(),
+                        itemId: itemId,
+                        scenario: sc,
+                        scriptText: text,
+                        audioFile: "\(itemId).m4a",
+                        variantTags: [],
+                        presentedAt: sessionDate,
+                        itemFirstListenCorrect: itemCorrect,
+                        slotAttempts: slotRecords
+                    )
+                )
+            }
 
             let session = SessionRecord(
                 id: UUID(),
@@ -213,9 +163,9 @@ enum ScreenshotHelper {
                     sessionLength: 12,
                     playInSilentMode: true
                 ),
-                itemCount: 4,
-                slotCount: 12,
-                firstListenCorrectSlots: correctCount,
+                itemCount: itemAttempts.count,
+                slotCount: sessionTotalSlots,
+                firstListenCorrectSlots: sessionCorrectSlots,
                 itemAttempts: itemAttempts
             )
             log.append(session)

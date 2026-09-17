@@ -1,4 +1,91 @@
 import Foundation
+import SwiftUI
+
+enum SpeedTier: String, Codable, CaseIterable, Identifiable {
+    case reflex
+    case fluent
+    case deliberate
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .reflex: return "Reflex"
+        case .fluent: return "Fluent"
+        case .deliberate: return "Deliberate"
+        }
+    }
+
+    var localizedTitle: String {
+        switch self {
+        case .reflex: return "直觉神速"
+        case .fluent: return "顺畅反应"
+        case .deliberate: return "思考心译"
+        }
+    }
+
+    var systemImage: String {
+        switch self {
+        case .reflex: return "bolt.fill"
+        case .fluent: return "hare.fill"
+        case .deliberate: return "tortoise.fill"
+        }
+    }
+
+    var color: Color {
+        switch self {
+        case .reflex: return .green
+        case .fluent: return .blue
+        case .deliberate: return .orange
+        }
+    }
+
+    static func tier(for ms: Int) -> SpeedTier {
+        if ms < 1500 { return .reflex }
+        if ms < 2500 { return .fluent }
+        return .deliberate
+    }
+}
+
+struct DailySpeedTrend: Identifiable, Hashable {
+    var id: Date { date }
+    var date: Date
+    var medianMs: Int
+    var accuracy: Double
+    var count: Int
+
+    var medianSeconds: Double {
+        Double(medianMs) / 1000.0
+    }
+}
+
+struct ScenarioSpeedAccuracy: Identifiable, Hashable {
+    var id: String { scenario.rawValue }
+    var scenario: Scenario
+    var medianMs: Int
+    var accuracy: Double
+    var count: Int
+
+    var tier: SpeedTier {
+        SpeedTier.tier(for: medianMs)
+    }
+
+    var medianSeconds: Double {
+        Double(medianMs) / 1000.0
+    }
+}
+
+struct SlotIndexSpeedAccuracy: Identifiable, Hashable {
+    var id: Int { slotIndex }
+    var slotIndex: Int
+    var medianMs: Int
+    var accuracy: Double
+    var count: Int
+
+    var medianSeconds: Double {
+        Double(medianMs) / 1000.0
+    }
+}
 
 struct SettingsSnapshot: Codable, Hashable {
     var clockStyle: String
@@ -20,6 +107,23 @@ struct SessionRecord: Codable, Identifiable, Hashable {
     var slotCount: Int
     var firstListenCorrectSlots: Int
     var itemAttempts: [ItemAttemptRecord]
+
+    var allSlotAttemptsFlat: [SlotAttemptRecord] {
+        itemAttempts.flatMap(\.slotAttempts)
+    }
+
+    var medianResponseMs: Int? {
+        AttemptLog.median(of: allSlotAttemptsFlat.map(\.responseMs))
+    }
+
+    var correctMedianResponseMs: Int? {
+        AttemptLog.median(of: allSlotAttemptsFlat.filter(\.firstTapCorrect).map(\.responseMs))
+    }
+
+    var speedTier: SpeedTier {
+        guard let ms = medianResponseMs else { return .fluent }
+        return SpeedTier.tier(for: ms)
+    }
 }
 
 struct ItemAttemptRecord: Codable, Identifiable, Hashable {
@@ -111,6 +215,79 @@ final class AttemptLog {
             guard !subset.isEmpty else { return nil }
             let ok = subset.filter { $0.2.firstTapCorrect }.count
             return (scenario, Double(ok) / Double(subset.count), subset.count)
+        }
+    }
+
+    static func median(of values: [Int]) -> Int? {
+        let valid = values.filter { $0 > 0 }.sorted()
+        guard !valid.isEmpty else { return nil }
+        let count = valid.count
+        if count % 2 == 1 {
+            return valid[count / 2]
+        } else {
+            return (valid[(count / 2) - 1] + valid[count / 2]) / 2
+        }
+    }
+
+    func medianResponseMs(since start: Date, source: String? = "practice", correctOnly: Bool = false) -> Int? {
+        let rows = allSlotAttempts.filter { session, _, slot in
+            session.startedAt >= start &&
+            (source == nil || session.source == source) &&
+            slot.responseMs > 0 &&
+            (!correctOnly || slot.firstTapCorrect)
+        }
+        return Self.median(of: rows.map(\.2.responseMs))
+    }
+
+    func scenarioSpeedAndAccuracy(since start: Date, source: String? = "practice") -> [ScenarioSpeedAccuracy] {
+        let rows = allSlotAttempts.filter { session, _, slot in
+            session.startedAt >= start &&
+            (source == nil || session.source == source) &&
+            slot.responseMs > 0
+        }
+        return Scenario.allCases.compactMap { sc in
+            let subset = rows.filter { $0.1.scenario == sc.rawValue }
+            guard !subset.isEmpty else { return nil }
+            guard let med = Self.median(of: subset.map(\.2.responseMs)) else { return nil }
+            let ok = subset.filter(\.2.firstTapCorrect).count
+            let acc = Double(ok) / Double(subset.count)
+            return ScenarioSpeedAccuracy(scenario: sc, medianMs: med, accuracy: acc, count: subset.count)
+        }
+    }
+
+    func slotIndexSpeedAndAccuracy(since start: Date, source: String? = "practice") -> [SlotIndexSpeedAccuracy] {
+        let rows = allSlotAttempts.filter { session, _, slot in
+            session.startedAt >= start &&
+            (source == nil || session.source == source) &&
+            slot.responseMs > 0
+        }
+        let indexes = Set(rows.map(\.2.slotIndex)).sorted()
+        return indexes.compactMap { idx in
+            let subset = rows.filter { $0.2.slotIndex == idx }
+            guard !subset.isEmpty, let med = Self.median(of: subset.map(\.2.responseMs)) else { return nil }
+            let ok = subset.filter(\.2.firstTapCorrect).count
+            let acc = Double(ok) / Double(subset.count)
+            return SlotIndexSpeedAccuracy(slotIndex: idx, medianMs: med, accuracy: acc, count: subset.count)
+        }
+    }
+
+    func dailySpeedTrend(since start: Date, source: String? = "practice") -> [DailySpeedTrend] {
+        let cal = Calendar.current
+        let rows = allSlotAttempts.filter { session, _, slot in
+            session.startedAt >= start &&
+            (source == nil || session.source == source) &&
+            slot.responseMs > 0
+        }
+        let grouped = Dictionary(grouping: rows) { row in
+            cal.startOfDay(for: row.0.startedAt)
+        }
+        return grouped.keys.sorted().compactMap { day in
+            guard let items = grouped[day], !items.isEmpty else { return nil }
+            let msList = items.map(\.2.responseMs)
+            guard let med = Self.median(of: msList) else { return nil }
+            let ok = items.filter(\.2.firstTapCorrect).count
+            let acc = Double(ok) / Double(items.count)
+            return DailySpeedTrend(date: day, medianMs: med, accuracy: acc, count: items.count)
         }
     }
 

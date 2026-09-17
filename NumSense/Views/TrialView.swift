@@ -18,9 +18,7 @@ struct TrialView: View {
                     }
 
                     if appModel.phase == .options || appModel.phase == .feedback {
-                        Text(appModel.currentPrompt)
-                            .font(.headline)
-                            .multilineTextAlignment(.center)
+                        questionChrome
                         optionGrid
                     }
                 }
@@ -87,8 +85,28 @@ struct TrialView: View {
         }
     }
 
+    @ViewBuilder
+    private var questionChrome: some View {
+        let question = appModel.currentQuestion
+        VStack(spacing: 10) {
+            if let item = appModel.currentItem, item.slots.count > 1 {
+                SlotStepStrip(slots: item.slots, currentIndex: appModel.slotIndex)
+            }
+            Text(question.title)
+                .font(.title2.weight(.bold))
+            Text(question.cue)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+        }
+        .multilineTextAlignment(.center)
+        .frame(maxWidth: .infinity)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(question.title). \(question.cue)")
+    }
+
     private var optionGrid: some View {
         let options = appModel.live?.options ?? []
+        let question = appModel.currentQuestion
         return LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
             ForEach(Array(options.enumerated()), id: \.offset) { _, option in
                 Button {
@@ -97,6 +115,7 @@ struct TrialView: View {
                     SlotOptionCard(
                         value: option,
                         settings: appModel.settings,
+                        question: question,
                         isSelected: appModel.live?.chosen == option,
                         verdict: appModel.verdict(for: option)
                     )
@@ -106,5 +125,34 @@ struct TrialView: View {
                 .disabled(appModel.phase != .options)
             }
         }
+    }
+}
+
+struct SlotStepStrip: View {
+    let slots: [CatalogSlot]
+    let currentIndex: Int
+
+    var body: some View {
+        HStack(spacing: 8) {
+            ForEach(Array(slots.enumerated()), id: \.offset) { index, _ in
+                let question = SlotQuestion.resolve(slots: slots, index: index)
+                let selected = index == currentIndex
+                Text(question.stripTitle)
+                    .font(.caption.weight(.semibold))
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(
+                        selected ? Color.accentColor.opacity(0.18) : Color.secondary.opacity(0.12),
+                        in: Capsule()
+                    )
+                    .overlay {
+                        Capsule()
+                            .strokeBorder(selected ? Color.accentColor : .clear, lineWidth: 1.5)
+                    }
+                    .foregroundStyle(selected ? Color.primary : Color.secondary)
+            }
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Question \(currentIndex + 1) of \(slots.count), \(SlotQuestion.resolve(slots: slots, index: currentIndex).stripTitle)")
     }
 }

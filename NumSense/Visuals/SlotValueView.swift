@@ -3,6 +3,7 @@ import SwiftUI
 struct SlotOptionCard: View {
     let value: SlotValue
     let settings: AppSettings
+    var question: SlotQuestion = .generic
     var isSelected: Bool
     var verdict: Verdict?
 
@@ -13,7 +14,7 @@ struct SlotOptionCard: View {
     }
 
     var body: some View {
-        SlotValueView(value: value, settings: settings)
+        SlotValueView(value: value, settings: settings, question: question)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(10)
             .background(background, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -43,54 +44,66 @@ struct SlotOptionCard: View {
 struct SlotValueView: View {
     let value: SlotValue
     let settings: AppSettings
+    var question: SlotQuestion = .generic
 
     var body: some View {
         switch value.type {
         case "clock":
-            ClockValueView(value: value, settings: settings)
+            ClockValueView(value: value, settings: settings, caption: caption)
         case "duration":
-            labeled("\(value.minutes ?? 0) min", caption: "DURATION")
+            labeled("\(value.minutes ?? 0) min", caption: caption)
         case "calendar":
-            CalendarCardView(value: value)
+            CalendarCardView(value: value, emphasizeWeekday: question.emphasizeWeekday)
         case "price":
-            labeled(Self.money(value.cents ?? 0), caption: "PRICE")
+            labeled(Self.money(value.cents ?? 0), caption: caption)
         case "door":
-            DoorPlateView(text: value.text ?? "")
+            DoorPlateView(text: value.text ?? "", caption: caption)
         case "gate":
             GateSignView(letter: value.letter ?? "", number: value.number ?? 0)
         case "flight":
-            labeled(value.text ?? "", caption: "FLIGHT")
+            labeled(value.text ?? "", caption: caption)
         case "phone":
-            labeled(grouped(value.text ?? ""), caption: "NUMBER")
+            PhoneChunkView(
+                text: value.text ?? "",
+                caption: caption,
+                groupIndex: question.phoneGroupIndex,
+                groupCount: question.phoneGroupCount
+            )
         case "address":
-            HouseNumberView(text: value.text ?? "")
+            HouseNumberView(text: value.text ?? "", caption: caption)
         case "zip":
-            labeled(value.text ?? "", caption: "ZIP")
+            labeled(value.text ?? "", caption: caption)
         case "quantity":
-            labeled("\(value.number ?? 0)", caption: "NO.")
+            labeled("\(value.number ?? 0)", caption: caption)
         case "percent":
-            labeled("\(value.percent ?? 0)%", caption: "OFF")
+            labeled("\(value.percent ?? 0)%", caption: caption)
         case "temperature":
             TemperatureView(degrees: value.degrees ?? 0)
         case "weight":
-            labeled(weightLabel, caption: (value.unit ?? "lb").uppercased())
+            labeled(weightLabel, caption: weightCaption)
         case "fuelGallons":
-            labeled(String(format: "%.1f gal", value.gallons ?? 0), caption: "PUMP")
+            labeled(String(format: "%.1f gal", value.gallons ?? 0), caption: caption)
         case "fuelPrice":
-            labeled("\(Self.money(value.cents ?? 0))/gal", caption: "GAS")
+            labeled("\(Self.money(value.cents ?? 0))/gal", caption: caption)
         case "miles":
-            labeled(mileLabel, caption: "MILES")
+            labeled(mileLabel, caption: caption)
         case "mph":
             SpeedoView(mph: value.mph ?? 0)
         case "psi":
-            labeled("\(value.psi ?? 0) PSI", caption: "TIRE")
+            labeled("\(value.psi ?? 0) PSI", caption: caption)
         case "highway":
             HighwayShieldView(text: value.text ?? "")
         case "exit":
-            labeled(value.text ?? "", caption: "EXIT")
+            labeled(value.text ?? "", caption: caption)
         default:
-            labeled(value.text ?? "?", caption: value.type.uppercased())
+            labeled(value.text ?? "?", caption: caption)
         }
+    }
+
+    private var caption: String { question.cardCaption }
+
+    private var weightCaption: String {
+        caption == "WEIGHT" ? (value.unit ?? "lb").uppercased() : caption
     }
 
     private var weightLabel: String {
@@ -107,18 +120,6 @@ struct SlotValueView: View {
             return String(format: "%.0f", miles)
         }
         return String(format: "%.1f", miles)
-    }
-
-    private func grouped(_ text: String) -> String {
-        if text.count == 10 {
-            let chars = Array(text)
-            return "\(String(chars[0..<3]))-\(String(chars[3..<6]))-\(String(chars[6...]))"
-        }
-        if text.count == 7 {
-            let chars = Array(text)
-            return "\(String(chars[0..<3]))-\(String(chars[3...]))"
-        }
-        return text
     }
 
     private func labeled(_ text: String, caption: String) -> some View {
@@ -144,12 +145,16 @@ struct SlotValueView: View {
 struct ClockValueView: View {
     let value: SlotValue
     let settings: AppSettings
+    var caption: String = "TIME"
 
     var body: some View {
         VStack(spacing: 8) {
+            Text(caption)
+                .font(.caption2.weight(.semibold))
+                .foregroundStyle(.secondary)
             if settings.clockStyle == .analog {
                 AnalogClockFace(hour: hour24, minute: minute)
-                    .frame(width: 92, height: 92)
+                    .frame(width: 84, height: 84)
             }
             Text(digital)
                 .font(.system(size: settings.clockStyle == .digital ? 32 : 18, weight: .semibold, design: .rounded))
@@ -226,19 +231,37 @@ struct AnalogClockFace: View {
 
 struct CalendarCardView: View {
     let value: SlotValue
+    var emphasizeWeekday: Bool = false
 
     var body: some View {
-        VStack(spacing: 2) {
-            Text(monthName)
-                .font(.caption.weight(.semibold))
-                .textCase(.uppercase)
-            Text("\(value.day ?? 0)")
-                .font(.system(size: 36, weight: .bold, design: .rounded))
-                .monospacedDigit()
-            if let weekday = value.weekday {
-                Text(String(weekday.prefix(3)).uppercased())
+        if emphasizeWeekday {
+            VStack(spacing: 4) {
+                Text("DAY")
                     .font(.caption2.weight(.semibold))
                     .foregroundStyle(.secondary)
+                Text(value.weekday ?? "—")
+                    .font(.system(size: 22, weight: .bold, design: .rounded))
+                    .textCase(.uppercase)
+                    .minimumScaleFactor(0.5)
+                    .lineLimit(1)
+                Text("\(monthName) \(value.day ?? 0)")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.secondary)
+                    .monospacedDigit()
+            }
+        } else {
+            VStack(spacing: 2) {
+                Text(monthName)
+                    .font(.caption.weight(.semibold))
+                    .textCase(.uppercase)
+                Text("\(value.day ?? 0)")
+                    .font(.system(size: 36, weight: .bold, design: .rounded))
+                    .monospacedDigit()
+                if let weekday = value.weekday {
+                    Text(String(weekday.prefix(3)).uppercased())
+                        .font(.caption2.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                }
             }
         }
     }
@@ -253,13 +276,14 @@ struct CalendarCardView: View {
 
 struct DoorPlateView: View {
     let text: String
+    var caption: String = "ROOM"
 
     var body: some View {
         VStack(spacing: 8) {
             RoundedRectangle(cornerRadius: 4)
                 .fill(Color.secondary.opacity(0.25))
                 .frame(height: 10)
-            Text("ROOM")
+            Text(caption)
                 .font(.caption2.weight(.semibold))
                 .foregroundStyle(.secondary)
             Text(text)
@@ -293,10 +317,11 @@ struct GateSignView: View {
 
 struct HouseNumberView: View {
     let text: String
+    var caption: String = "HOUSE"
 
     var body: some View {
         VStack(spacing: 6) {
-            Text("NO.")
+            Text(caption)
                 .font(.caption2.weight(.semibold))
                 .foregroundStyle(.secondary)
             Text(text)
@@ -304,6 +329,67 @@ struct HouseNumberView: View {
                 .minimumScaleFactor(0.4)
                 .lineLimit(1)
         }
+    }
+}
+
+struct PhoneChunkView: View {
+    let text: String
+    var caption: String = "NUMBER"
+    var groupIndex: Int?
+    var groupCount: Int?
+
+    var body: some View {
+        VStack(spacing: 6) {
+            Text(caption)
+                .font(.caption2.weight(.semibold))
+                .foregroundStyle(.secondary)
+            groupRow
+                .font(.system(size: 22, weight: .semibold, design: .rounded))
+                .monospacedDigit()
+                .minimumScaleFactor(0.4)
+                .lineLimit(1)
+        }
+    }
+
+    @ViewBuilder
+    private var groupRow: some View {
+        if let groupIndex, let groupCount, groupCount >= 2 {
+            HStack(spacing: 2) {
+                if groupCount == 3 {
+                    masked(0, width: 3, grouped: true)
+                    masked(1, width: 3)
+                    Text("-").foregroundStyle(.tertiary)
+                    masked(2, width: 4)
+                } else {
+                    masked(0, width: 3)
+                    Text("-").foregroundStyle(.tertiary)
+                    masked(1, width: 4)
+                }
+            }
+        } else {
+            Text(grouped(text))
+        }
+    }
+
+    private func masked(_ index: Int, width: Int, grouped: Bool = false) -> some View {
+        let filled = index == groupIndex
+        let raw = filled ? text : String(repeating: "•", count: width)
+        let shown = grouped ? "(\(raw))" : raw
+        return Text(shown)
+            .fontWeight(filled ? .bold : .regular)
+            .foregroundStyle(filled ? .primary : .tertiary)
+    }
+
+    private func grouped(_ text: String) -> String {
+        if text.count == 10 {
+            let chars = Array(text)
+            return "\(String(chars[0..<3]))-\(String(chars[3..<6]))-\(String(chars[6...]))"
+        }
+        if text.count == 7 {
+            let chars = Array(text)
+            return "\(String(chars[0..<3]))-\(String(chars[3...]))"
+        }
+        return text
     }
 }
 

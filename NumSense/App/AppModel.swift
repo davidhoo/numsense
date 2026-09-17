@@ -49,13 +49,12 @@ final class AppModel {
 
     var progressLabel: String {
         guard !queue.isEmpty else { return "" }
-        let slotTotal = currentItem?.slots.count ?? 1
-        return "Item \(itemIndex + 1) of \(queue.count)  ·  \(slotIndex + 1) of \(slotTotal)"
+        return "Item \(itemIndex + 1) of \(queue.count)"
     }
 
-    var currentPrompt: String {
-        guard let item = currentItem, let slot = currentSlot else { return "Which value did you hear?" }
-        return slot.prompt(slotIndex: slotIndex, slotCount: item.slots.count)
+    var currentQuestion: SlotQuestion {
+        guard let item = currentItem else { return .generic }
+        return SlotQuestion.resolve(slots: item.slots, index: slotIndex)
     }
 
     var lastAnswerWasWrong: Bool {

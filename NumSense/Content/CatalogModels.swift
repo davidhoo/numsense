@@ -106,88 +106,174 @@ struct AppSettings: Codable, Equatable {
     )
 }
 
+struct SlotQuestion: Equatable {
+    var title: String
+    var cue: String
+    var stripTitle: String
+    var cardCaption: String
+    var emphasizeWeekday: Bool
+    var phoneGroupIndex: Int?
+    var phoneGroupCount: Int?
+
+    static let generic = SlotQuestion(
+        title: "Number",
+        cue: "Which number?",
+        stripTitle: "No.",
+        cardCaption: "NO.",
+        emphasizeWeekday: false,
+        phoneGroupIndex: nil,
+        phoneGroupCount: nil
+    )
+
+    static func resolve(slots: [CatalogSlot], index: Int) -> SlotQuestion {
+        guard slots.indices.contains(index) else { return .generic }
+        let slot = slots[index]
+        let indexes = { (role: String) in slots.indices.filter { slots[$0].role == role } }
+
+        if slot.role == "phone" {
+            let phone = Array(indexes("phone"))
+            let group = phone.firstIndex(of: index) ?? 0
+            let names: [(String, String, String)]
+            switch phone.count {
+            case 3:
+                names = [
+                    ("Area", "Which area code?", "AREA"),
+                    ("Prefix", "Which prefix?", "PREFIX"),
+                    ("Last 4", "Which last four?", "LINE"),
+                ]
+            case 2:
+                names = [
+                    ("Prefix", "Which prefix?", "PREFIX"),
+                    ("Last 4", "Which last four?", "LINE"),
+                ]
+            default:
+                names = [("Phone", "Which digits?", "NUMBER")]
+            }
+            let pick = names[min(group, names.count - 1)]
+            return SlotQuestion(
+                title: pick.0,
+                cue: pick.1,
+                stripTitle: pick.0,
+                cardCaption: pick.2,
+                emphasizeWeekday: false,
+                phoneGroupIndex: group,
+                phoneGroupCount: phone.count
+            )
+        }
+
+        if slot.role == "clock" {
+            let clocks = Array(indexes("clock"))
+            if clocks.count >= 2, let group = clocks.firstIndex(of: index) {
+                if group == 0 {
+                    return make("Opens", "Opens at?", "FROM")
+                }
+                return make("Closes", "Closes at?", "UNTIL")
+            }
+            return make("Time", "Which time?", "TIME")
+        }
+
+        if slot.role == "amount" {
+            return amountQuestion(slots: slots, index: index)
+        }
+
+        if slot.role == "weekday" {
+            return SlotQuestion(
+                title: "Weekday",
+                cue: "Which day?",
+                stripTitle: "Day",
+                cardCaption: "DAY",
+                emphasizeWeekday: true,
+                phoneGroupIndex: nil,
+                phoneGroupCount: nil
+            )
+        }
+
+        return Self.base[slot.role] ?? make(slot.role.capitalized, "Which \(slot.role)?", slot.role.uppercased())
+    }
+
+    private static func amountQuestion(slots: [CatalogSlot], index: Int) -> SlotQuestion {
+        let slot = slots[index]
+        switch slot.id {
+        case "paid": return make("Paid", "How much did they pay?", "PAID")
+        case "ch": return make("Change", "How much change?", "CHANGE")
+        case "b": return make("Bill", "What was the bill?", "BILL")
+        default: break
+        }
+
+        let amountIndexes = slots.indices.filter { slots[$0].role == "amount" }
+        let group = amountIndexes.firstIndex(of: index) ?? 0
+        let hasPercent = slots.contains { $0.role == "percent" }
+        if hasPercent {
+            return group == 0
+                ? make("Bill", "What was the bill?", "BILL")
+                : make("Tip", "How much is the tip?", "TIP")
+        }
+        if amountIndexes.count == 3 {
+            let names = [
+                ("Bill", "What was the bill?", "BILL"),
+                ("Paid", "How much did they pay?", "PAID"),
+                ("Change", "How much change?", "CHANGE"),
+            ]
+            let pick = names[group]
+            return make(pick.0, pick.1, pick.2)
+        }
+        if amountIndexes.count == 2 {
+            return group == 0
+                ? make("Paid", "How much did they pay?", "PAID")
+                : make("Change", "How much change?", "CHANGE")
+        }
+        return make("Price", "Which amount?", "PRICE")
+    }
+
+    private static func make(_ title: String, _ cue: String, _ caption: String, strip: String? = nil) -> SlotQuestion {
+        SlotQuestion(
+            title: title,
+            cue: cue,
+            stripTitle: strip ?? title,
+            cardCaption: caption,
+            emphasizeWeekday: false,
+            phoneGroupIndex: nil,
+            phoneGroupCount: nil
+        )
+    }
+
+    private static let base: [String: SlotQuestion] = [
+        "duration": make("Duration", "How long?", "WAIT"),
+        "date": make("Date", "Which date?", "DATE"),
+        "fuelPrice": make("$/gal", "Price per gallon?", "$/GAL", strip: "$/gal"),
+        "room": make("Room", "Which room?", "ROOM"),
+        "floor": make("Floor", "Which floor?", "FLOOR"),
+        "seat": make("Seat", "Which seat?", "SEAT"),
+        "apt": make("Apt", "Which apartment?", "APT"),
+        "parking": make("Space", "Which space?", "SPACE"),
+        "parkingLevel": make("Level", "Which level?", "LEVEL"),
+        "gate": make("Gate", "Which gate?", "GATE"),
+        "flight": make("Flight", "Which flight?", "FLIGHT"),
+        "terminal": make("Terminal", "Which terminal?", "TERM"),
+        "carousel": make("Carousel", "Which carousel?", "BAGGAGE"),
+        "bus": make("Bus", "Which bus?", "BUS"),
+        "code": make("Code", "Which code?", "CODE"),
+        "extension": make("Ext", "Which extension?", "EXT"),
+        "address": make("House", "Which house number?", "HOUSE"),
+        "zip": make("ZIP", "Which ZIP?", "ZIP"),
+        "count": make("Party", "Party of how many?", "PARTY"),
+        "window": make("Window", "Which window?", "WINDOW"),
+        "aisle": make("Aisle", "Which aisle?", "AISLE"),
+        "weight": make("Weight", "What weight?", "WEIGHT"),
+        "fuel": make("Gallons", "How many gallons?", "PUMP"),
+        "distance": make("Miles", "What distance?", "MILES"),
+        "speed": make("Speed", "What speed?", "MPH"),
+        "pressure": make("PSI", "What tire pressure?", "TIRE"),
+        "temperature": make("Temp", "What temperature?", "°F"),
+        "percent": make("Percent", "What percent?", "PERCENT"),
+        "highway": make("Highway", "Which highway?", "HWY"),
+        "exit": make("Exit", "Which exit?", "EXIT"),
+        "volume": make("Qty", "What quantity?", "QTY"),
+    ]
+}
+
 extension CatalogSlot {
     func optionsShuffled(using rng: inout some RandomNumberGenerator) -> [SlotValue] {
         ([value] + distractors).shuffled(using: &rng)
-    }
-
-    func prompt(slotIndex: Int, slotCount: Int) -> String {
-        let detail: String
-        switch role {
-        case "clock":
-            detail = "What time did you hear?"
-        case "duration":
-            detail = "How long did they say? (minutes or hours)"
-        case "date":
-            detail = "What date did you hear?"
-        case "weekday":
-            detail = "What day of the week did you hear?"
-        case "amount":
-            detail = "What dollar amount did you hear?"
-        case "fuelPrice":
-            detail = "What was the price per gallon?"
-        case "room":
-            detail = "What room number did you hear?"
-        case "floor":
-            detail = "What floor did they say?"
-        case "seat":
-            detail = "What seat did you hear?"
-        case "apt":
-            detail = "What apartment / suite did you hear?"
-        case "parking":
-            detail = "What parking space did you hear?"
-        case "parkingLevel":
-            detail = "What parking level did you hear?"
-        case "gate":
-            detail = "Which gate did you hear?"
-        case "flight":
-            detail = "What flight number did you hear?"
-        case "terminal":
-            detail = "Which terminal did you hear?"
-        case "carousel":
-            detail = "Which baggage carousel did you hear?"
-        case "bus":
-            detail = "Which bus / train number did you hear?"
-        case "phone":
-            detail = "Which phone digits did you hear for this group?"
-        case "code":
-            detail = "What code / last four did you hear?"
-        case "extension":
-            detail = "What extension did you hear?"
-        case "address":
-            detail = "What street / house number did you hear?"
-        case "zip":
-            detail = "What ZIP code did you hear?"
-        case "count", "window":
-            detail = "What number did you hear?"
-        case "aisle":
-            detail = "Which aisle did you hear?"
-        case "weight":
-            detail = "What weight did you hear?"
-        case "fuel":
-            detail = "How many gallons did you hear?"
-        case "distance":
-            detail = "What distance did you hear?"
-        case "speed":
-            detail = "What speed did you hear?"
-        case "pressure":
-            detail = "What tire pressure (PSI) did you hear?"
-        case "temperature":
-            detail = "What temperature did you hear?"
-        case "percent":
-            detail = "What percent did you hear?"
-        case "highway":
-            detail = "Which highway did you hear?"
-        case "exit":
-            detail = "Which exit did you hear?"
-        case "volume":
-            detail = "What quantity did you hear?"
-        default:
-            detail = "Which value did you hear?"
-        }
-        if slotCount > 1 {
-            return "This clip had \(slotCount) numbers. (\(slotIndex + 1) of \(slotCount)) \(detail)"
-        }
-        return detail
     }
 }
